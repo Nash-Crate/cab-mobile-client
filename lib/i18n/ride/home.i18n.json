@@ -1,0 +1,20 @@
+{
+  "balance(rich)": "Current Balance : ${currency( MRU)}",
+  "actions": {
+    "begin": "Begin by Setting your Pick-up Location",
+    "setDropOff": "Set Drop-off Location",
+    "pickupLocation": "Pickup Location",
+    "openRide": "Open Ride"
+  },
+  "drawer": {
+    "home": "Home",
+    "tripHistory": "Trip History",
+    "aboutUs": "About Us",
+    "contactUs": "Contact Us",
+    "settings": "Settings",
+    "logout": {
+      "title": "Log out",
+      "text": "Are you sure you want to log out?"
+    }
+  }
+}

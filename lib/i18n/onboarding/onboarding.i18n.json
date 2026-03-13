@@ -1,0 +1,22 @@
+{
+  "slides": {
+    "smoothAndQuick": {
+      "title": "Smooth and Quick",
+      "subtitle": "Route Entry",
+      "description": "Our App Makes it easier than ever to enter your route"
+    },
+    "findNearby": {
+      "title": "Find Nearby",
+      "subtitle": "Rides Fast",
+      "description": "We value your time as much as you do, so waiting is no more longer"
+    },
+    "feelCozy": {
+      "title": "Feel Cozy",
+      "subtitle": "With Us",
+      "description": "Our priority is to provide you with comfortable and safe service"
+    }
+  },
+  "actions": {
+    "start": "Start"
+  }
+}

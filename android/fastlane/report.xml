@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+  <testsuite name="fastlane.lanes">
+    
+    
+    
+      
+      <testcase classname="fastlane.lanes" name="00: default_platform" time="0.000224">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="01: Switch to android clean lane" time="7.9e-05">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="02: flutter clean" time="2.27429">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="03: Switch to android pub_get lane" time="0.000116">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="04: flutter pub get" time="2.384589">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="05: Switch to android slang lane" time="0.000128">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="06: dart run slang" time="0.648166">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="07: Switch to android build_runner lane" time="0.000104">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="08: dart run build_runner clean" time="2.545534">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="09: dart run build_runner build -d" time="19.250798">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="10: flutter build appbundle -t lib/main_stg.dart --flavor staging --obfuscate --split-debug-info=build/app/outputs/apk/release/obfuscate-files" time="60.968069">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="11: upload_to_play_store" time="0.003004">
+        
+          <failure message="/opt/homebrew/Cellar/fastlane/2.226.0_1/libexec/gems/fastlane-2.226.0/fastlane/lib/fastlane/actions/actions_helper.rb:67:in &apos;Fastlane::Actions.execute_action&apos;&#10;/opt/homebrew/Cellar/fastlane/2.226.0_1/libexec/gems/fastlane-2.226.0/fastlane/lib/fastlane/runner.rb:255:in &apos;block in Fastlane::Runner#execute_action&apos;&#10;/opt/homebrew/Cellar/fastlane/2.226.0_1/libexec/gems/fastlane-2.226.0/fastlane/lib/fastlane/runner.rb:229:in &apos;Dir.chdir&apos;&#10;/opt/homebrew/Cellar/fastlane/2.226.0_1/libexec/gems/fastlane-2.226.0/fastlane/lib/fastlane/runner.rb:229:in &apos;Fastlane::Runner#execute_action&apos;&#10;/opt/homebrew/Cellar/fastlane/2.226.0_1/libexec/gems/fastlane-2.226.0/fastlane/lib/fastlane/runner.rb:157:in &apos;Fastlane::Runner#trigger_action_by_name&apos;&#10;/opt/homebrew/Cellar/fastlane/2.226.0_1/libexec/gems/fastlane-2.226.0/fastlane/lib/fastlane/fast_file.rb:159:in &apos;Fastlane::FastFile#method_missing&apos;&#10;Fastfile:36:in &apos;block (2 levels) in Fastlane::FastFile#parsing_binding&apos;&#10;/opt/homebrew/Cellar/fastlane/2.226.0_1/libexec/gems/fastlane-2.226.0/fastlane/lib/fastlane/lane.rb:41:in &apos;Fastlane::Lane#call&apos;&#10;/opt/homebrew/Cellar/fastlane/2.226.0_1/libexec/gems/fastlane-2.226.0/fastlane/lib/fastlane/runner.rb:49:in &apos;block in Fastlane::Runner#execute&apos;&#10;/opt/homebrew/Cellar/fastlane/2.226.0_1/libexec/gems/fastlane-2.226.0/fastlane/lib/fastlane/runner.rb:45:in &apos;Dir.chdir&apos;&#10;/opt/homebrew/Cellar/fastlane/2.226.0_1/libexec/gems/fastlane-2.226.0/fastlane/lib/fastlane/runner.rb:45:in &apos;Fastlane::Runner#execute&apos;&#10;/opt/homebrew/Cellar/fastlane/2.226.0_1/libexec/gems/fastlane-2.226.0/fastlane/lib/fastlane/lane_manager.rb:46:in &apos;Fastlane::LaneManager.cruise_lane&apos;&#10;/opt/homebrew/Cellar/fastlane/2.226.0_1/libexec/gems/fastlane-2.226.0/fastlane/lib/fastlane/command_line_handler.rb:34:in &apos;Fastlane::CommandLineHandler.handle&apos;&#10;/opt/homebrew/Cellar/fastlane/2.226.0_1/libexec/gems/fastlane-2.226.0/fastlane/lib/fastlane/commands_generator.rb:110:in &apos;block (2 levels) in Fastlane::CommandsGenerator#run&apos;&#10;/opt/homebrew/Cellar/fastlane/2.226.0_1/libexec/gems/commander-4.6.0/lib/commander/command.rb:187:in &apos;Commander::Command#call&apos;&#10;/opt/homebrew/Cellar/fastlane/2.226.0_1/libexec/gems/commander-4.6.0/lib/commander/command.rb:157:in &apos;Commander::Command#run&apos;&#10;/opt/homebrew/Cellar/fastlane/2.226.0_1/libexec/gems/commander-4.6.0/lib/commander/runner.rb:444:in &apos;Commander::Runner#run_active_command&apos;&#10;/opt/homebrew/Cellar/fastlane/2.226.0_1/libexec/gems/fastlane-2.226.0/fastlane_core/lib/fastlane_core/ui/fastlane_runner.rb:124:in &apos;Commander::Runner#run!&apos;&#10;/opt/homebrew/Cellar/fastlane/2.226.0_1/libexec/gems/commander-4.6.0/lib/commander/delegates.rb:18:in &apos;Commander::Delegates#run!&apos;&#10;/opt/homebrew/Cellar/fastlane/2.226.0_1/libexec/gems/fastlane-2.226.0/fastlane/lib/fastlane/commands_generator.rb:363:in &apos;Fastlane::CommandsGenerator#run&apos;&#10;/opt/homebrew/Cellar/fastlane/2.226.0_1/libexec/gems/fastlane-2.226.0/fastlane/lib/fastlane/commands_generator.rb:43:in &apos;Fastlane::CommandsGenerator.start&apos;&#10;/opt/homebrew/Cellar/fastlane/2.226.0_1/libexec/gems/fastlane-2.226.0/fastlane/lib/fastlane/cli_tools_distributor.rb:123:in &apos;Fastlane::CLIToolsDistributor.take_off&apos;&#10;/opt/homebrew/Cellar/fastlane/2.226.0_1/libexec/gems/fastlane-2.226.0/bin/fastlane:23:in &apos;&lt;top (required)&gt;&apos;&#10;/opt/homebrew/Cellar/fastlane/2.226.0_1/libexec/bin/fastlane:25:in &apos;Kernel#load&apos;&#10;/opt/homebrew/Cellar/fastlane/2.226.0_1/libexec/bin/fastlane:25:in &apos;&lt;main&gt;&apos;&#10;&#10;No authentication parameters were specified. These must be provided in order to authenticate with Google" />
+        
+      </testcase>
+    
+  </testsuite>
+</testsuites>

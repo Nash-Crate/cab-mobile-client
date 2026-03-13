@@ -1,0 +1,49 @@
+{
+  "title": "خطأ",
+  "actions": {
+    "text": "فشلت العملية",
+    "failed": "فشلت $action",
+    "failed_extra": "فشلت $action، $extra"
+  },
+  "validations": {
+    "dropdown": "يرجى اختيار خيار صالح"
+  },
+  "fields": {
+    "input": "يرجى إدخال $field صالح",
+    "select": "يرجى اختيار $field صالح",
+    "minChar": "يجب أن يحتوي $field الخاص بك على $min أحرف على الأقل.",
+    "maxChar": "يجب ألا يتجاوز $field الخاص بك $max حرفًا.",
+    "password": "يجب أن يحتوي $field الخاص بك على على الأقل $min حرفًا، حرف كبير واحد، قيمة رقمية واحدة.",
+    "confirm": "لا يتطابق $field الخاص بك مع $confirmField.",
+    "required": "حقل $field مطلوب."
+  },
+  "failures": {
+    "cache": {
+      "clear": "فشل في مسح الذاكرة المخبأة",
+      "get": "فشل في استرجاع الذاكرة المخبأة",
+      "noAuth": "لم يتم العثور على جلسات تسجيل الدخول السابقة.",
+      "set": "فشل في تخزين البيانات المخبأة"
+    },
+    "token": {
+      "expired": "Session expired.",
+      "noPreviousAuth": "No previous logged in sessions found.",
+      "invalid": "رمز غير صالح"
+    },
+    "formatException": "غير قادر على معالجة البيانات",
+    "noInternet": "لم يتم العثور على اتصال إنترنت صالح.",
+    "somethingWentWrong": "حدث خطأ ما.",
+    "unableToProcess": "غير قادر على المعالجة",
+    "unauthorized": "غير مصرح به.",
+    "unexpectedError": "خطأ غير متوقع",
+    "unknownError": "حاول مرة أخرى. حدث خطأ غير معروف. نحن نعمل على ذلك.",
+    "mqtt": {
+      "connectionRefused": "فشل في الاتصال بالخادم!"
+    }
+  },
+  "location": {
+    "servicesDisabled": "Location services are disabled.",
+    "permissionsDenied": "Location permissions are denied",
+    "permissionsDeniedForever": "Location permissions are permanently denied, we cannot request permissions.",
+    "noRouteFound": "No route found."
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "title": "Trip History",
+  "sortBy": {
+    "title": "Sort By",
+    "options(map)": {
+      "latest": "Latest",
+      "oldest": "Oldest",
+      "priceHighToLow": "Price High to Low",
+      "priceLowToHigh": "Price Low to High"
+    }
+  },
+  "details": {
+    "title": "Trip Details"
+  }
+}

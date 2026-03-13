@@ -1,0 +1,88 @@
+# This file contains the fastlane.tools configuration
+# You can find the documentation at https://docs.fastlane.tools
+#
+# For a list of all available actions, check out
+#
+#     https://docs.fastlane.tools/actions
+#
+# For a list of all available plugins, check out
+#
+#     https://docs.fastlane.tools/plugins/available-plugins
+#
+
+# Uncomment the line if you want fastlane to automatically update itself
+# update_fastlane
+
+default_platform(:android)
+
+platform :android do
+
+  desc "Run [staging] release"
+  lane :staging do
+    Dir.chdir("../../")
+
+    clean
+    pub_get
+
+    slang
+    build_runner
+
+#     test_only
+
+    sh("flutter build appbundle -t lib/main_stg.dart --flavor staging --obfuscate --split-debug-info=build/app/outputs/apk/release/obfuscate-files --dart-define HTTP_BASE_URL=#{ENV["HTTP_BASE_URL"]} --dart-define GOOGLE_MAPS_API_KEY_ENVIRONMENT_VARIABLE=#{ENV["GOOGLE_MAPS_API_KEY_ENVIRONMENT_VARIABLE"]}")
+
+    Dir.chdir("#{Dir.pwd}/android/fastlane/")
+
+    upload_to_play_store(
+      # version_name: version_name + "+" + build_number, # 0.0.1+1
+      release_status: "draft",
+      track: "internal",
+      package_name: "com.mauricab.mobile_client.stg",
+      json_key: ENV["GCC_SERVICE_ACC"],
+      skip_upload_apk: true,
+      aab: "../build/app/outputs/bundle/stagingRelease/app-staging-release.aab",
+      skip_upload_changelogs: true,
+      skip_upload_images: true,
+      skip_upload_screenshots: true
+    )
+  end
+
+  desc "Clean"
+  lane :clean do
+    sh("flutter clean")
+  end
+
+  desc "Get packages"
+  lane :pub_get do
+    sh("flutter pub get")
+  end
+
+  desc "Generate translations"
+  lane :slang do
+    sh("dart run slang")
+  end
+
+  desc "Generate build_runner"
+  lane :build_runner do
+    sh("dart run build_runner clean")
+    sh("dart run build_runner build -d")
+  end
+
+  desc "Run only tests"
+  lane :test_only do
+#     flutter_analyze
+
+    flutter_tests
+  end
+
+  desc "Runs flutter analyze"
+  lane :flutter_analyze do
+    sh("flutter analyze")
+  end
+
+  desc "Runs all the tests"
+  lane :flutter_tests do
+    sh("flutter test")
+  end
+
+end

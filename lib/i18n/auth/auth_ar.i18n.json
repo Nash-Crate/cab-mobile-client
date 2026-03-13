@@ -1,0 +1,36 @@
+{
+  "login": {
+    "welcome": "مرحبًا بك في موريكاب",
+    "letsStart": "لنبدأ! أدخل رقم هاتفك"
+  },
+  "registration": {
+    "title": "التسجيل",
+    "phoneNumber": "أدخل رقم الهاتف",
+    "fullName": {
+      "label": "الاسم الكامل",
+      "hint": "فلان الفلاني"
+    },
+    "firstName": {
+      "label": "First Name",
+      "hint": "John"
+    },
+    "lastName": {
+      "label": "Last Name",
+      "hint": "Doe"
+    },
+    "gender": "اختر جنسك",
+    "tAndC(rich)": "لقد قرأت ووافقت على ${tapHere(شروط الاستخدام)}",
+    "actions": {
+      "signUp": "سجّل"
+    }
+  },
+  "verification": {
+    "codeSent": "لقد أرسلنا لك رمزًا عبر الرسائل القصيرة",
+    "onNumber(rich)": "على الرقم: ${number(phoneNumberPlaceHolder)}",
+    "enterCode": "الرجاء إدخال رمز التحقق المكوّن من 6 أرقام",
+    "notReceived(rich)": "لم تستلم الرمز؟ ${resend(إعادة الإرسال)}",
+    "actions": {
+      "verify": "تحقق"
+    }
+  }
+}

@@ -1,0 +1,1020 @@
+{
+  "app": {
+    "title": "تطبيق موري كاب",
+    "subtitle": "أفضل تطبيق للتاكسي في العالم"
+  },
+  "gender": {
+    "value(map)": {
+      "male": "ذكر",
+      "female": "أنثى"
+    }
+  },
+  "fields": {
+    "phoneNumber": {
+      "label": "أدخل رقم الهاتف",
+      "hint": "777 777 777"
+    }
+  },
+  "actions": {
+    "close": "إغلاق",
+    "cont": "متابعة",
+    "submit": "Submit",
+    "cancel": "Cancel"
+  },
+  "language": {
+    "title": {
+      "lang": "اللغة",
+      "select": "اختر اللغة",
+      "active": "عربي"
+    },
+    "value(map)": {
+      "ar": "عربي",
+      "en": "English"
+    }
+  },
+  "country": {
+    "select": {
+      "title": "اختر رمز البلد",
+      "error": "فشل في اختيار البلد"
+    },
+    "value(map)": {
+      "AF(map)": {
+        "dialCode": "+93",
+        "name": "أفغانستان"
+      },
+      "AX(map)": {
+        "dialCode": "+358",
+        "name": "جزر آلاند"
+      },
+      "AL(map)": {
+        "dialCode": "+355",
+        "name": "ألبانيا"
+      },
+      "DZ(map)": {
+        "dialCode": "+213",
+        "name": "الجزائر"
+      },
+      "AS(map)": {
+        "dialCode": "+1684",
+        "name": "ساموا الأمريكية"
+      },
+      "AD(map)": {
+        "dialCode": "+376",
+        "name": "أندورا"
+      },
+      "AO(map)": {
+        "dialCode": "+244",
+        "name": "أنغولا"
+      },
+      "AI(map)": {
+        "dialCode": "+1264",
+        "name": "أنغويلا"
+      },
+      "AQ(map)": {
+        "dialCode": "+672",
+        "name": "القطب الجنوبي"
+      },
+      "AG(map)": {
+        "dialCode": "+1268",
+        "name": "أنتيغوا وبربودا"
+      },
+      "AR(map)": {
+        "dialCode": "+54",
+        "name": "الأرجنتين"
+      },
+      "AM(map)": {
+        "dialCode": "+374",
+        "name": "أرمينيا"
+      },
+      "AW(map)": {
+        "dialCode": "+297",
+        "name": "أروبا"
+      },
+      "AU(map)": {
+        "dialCode": "+61",
+        "name": "أستراليا"
+      },
+      "AT(map)": {
+        "dialCode": "+43",
+        "name": "النمسا"
+      },
+      "AZ(map)": {
+        "dialCode": "+994",
+        "name": "أذربيجان"
+      },
+      "BS(map)": {
+        "dialCode": "+1242",
+        "name": "الباهاما"
+      },
+      "BH(map)": {
+        "dialCode": "+973",
+        "name": "البحرين"
+      },
+      "BD(map)": {
+        "dialCode": "+880",
+        "name": "بنغلاديش"
+      },
+      "BB(map)": {
+        "dialCode": "+1246",
+        "name": "بربادوس"
+      },
+      "BY(map)": {
+        "dialCode": "+375",
+        "name": "بيلاروسيا"
+      },
+      "BE(map)": {
+        "dialCode": "+32",
+        "name": "بلجيكا"
+      },
+      "BZ(map)": {
+        "dialCode": "+501",
+        "name": "بليز"
+      },
+      "BJ(map)": {
+        "dialCode": "+229",
+        "name": "بنين"
+      },
+      "BM(map)": {
+        "dialCode": "+1441",
+        "name": "برمودا"
+      },
+      "BT(map)": {
+        "dialCode": "+975",
+        "name": "بوتان"
+      },
+      "BO(map)": {
+        "dialCode": "+591",
+        "name": "بوليفيا"
+      },
+      "BA(map)": {
+        "dialCode": "+387",
+        "name": "البوسنة والهرسك"
+      },
+      "BW(map)": {
+        "dialCode": "+267",
+        "name": "بوتسوانا"
+      },
+      "BR(map)": {
+        "dialCode": "+55",
+        "name": "البرازيل"
+      },
+      "IO(map)": {
+        "dialCode": "+246",
+        "name": "إقليم الم حيط الهندي البريطاني"
+      },
+      "BN(map)": {
+        "dialCode": "+673",
+        "name": "بروناي"
+      },
+      "BG(map)": {
+        "dialCode": "+359",
+        "name": "بلغاريا"
+      },
+      "BF(map)": {
+        "dialCode": "+226",
+        "name": "بوركينا فاسو"
+      },
+      "BI(map)": {
+        "dialCode": "+257",
+        "name": "بوروندي"
+      },
+      "KH(map)": {
+        "dialCode": "+855",
+        "name": "كمبوديا"
+      },
+      "CM(map)": {
+        "dialCode": "+237",
+        "name": "الكاميرون"
+      },
+      "CA(map)": {
+        "dialCode": "+1",
+        "name": "كندا"
+      },
+      "CV(map)": {
+        "dialCode": "+238",
+        "name": "الرأس الأخضر"
+      },
+      "BQ(map)": {
+        "dialCode": "+599",
+        "name": "بونير"
+      },
+      "KY(map)": {
+        "dialCode": "+1345",
+        "name": "جزر كايمان"
+      },
+      "CF(map)": {
+        "dialCode": "+236",
+        "name": "جمهورية أفريقيا الوسطى"
+      },
+      "TD(map)": {
+        "dialCode": "+235",
+        "name": "تشاد"
+      },
+      "CL(map)": {
+        "dialCode": "+56",
+        "name": "تشيلي"
+      },
+      "CN(map)": {
+        "dialCode": "+86",
+        "name": "الصين"
+      },
+      "CX(map)": {
+        "dialCode": "+61",
+        "name": "جزيرة الكريسماس"
+      },
+      "CC(map)": {
+        "dialCode": "+61",
+        "name": "جزر كوكوس (كيلينغ)"
+      },
+      "CO(map)": {
+        "dialCode": "+57",
+        "name": "كولومبيا"
+      },
+      "KM(map)": {
+        "dialCode": "+269",
+        "name": "جزر القمر"
+      },
+      "CD(map)": {
+        "dialCode": "+243",
+        "name": "جمهورية الكونغو الديمقراطية"
+      },
+      "CG(map)": {
+        "dialCode": "+242",
+        "name": "جمهورية الكونغو"
+      },
+      "CK(map)": {
+        "dialCode": "+682",
+        "name": "جزر كوك"
+      },
+      "CR(map)": {
+        "dialCode": "+506",
+        "name": "كوستاريكا"
+      },
+      "HR(map)": {
+        "dialCode": "+385",
+        "name": "كرواتيا"
+      },
+      "CU(map)": {
+        "dialCode": "+53",
+        "name": "كوبا"
+      },
+      "CW(map)": {
+        "dialCode": "+599",
+        "name": "كوراساو"
+      },
+      "CY(map)": {
+        "dialCode": "+357",
+        "name": "قبرص"
+      },
+      "CZ(map)": {
+        "dialCode": "+420",
+        "name": "التشيك"
+      },
+      "DK(map)": {
+        "dialCode": "+45",
+        "name": "الدانمرك"
+      },
+      "DJ(map)": {
+        "dialCode": "+253",
+        "name": "جيبوتي"
+      },
+      "DM(map)": {
+        "dialCode": "+1767",
+        "name": "دومينيكا"
+      },
+      "DO(map)": {
+        "dialCode": "+1",
+        "name": "جمهورية الدومينيكان"
+      },
+      "EC(map)": {
+        "dialCode": "+593",
+        "name": "الإكوادور"
+      },
+      "EG(map)": {
+        "dialCode": "+20",
+        "name": "مصر"
+      },
+      "SV(map)": {
+        "dialCode": "+503",
+        "name": "السلفادور"
+      },
+      "GQ(map)": {
+        "dialCode": "+240",
+        "name": "غينيا الاستوائية"
+      },
+      "ER(map)": {
+        "dialCode": "+291",
+        "name": "إريتريا"
+      },
+      "EE(map)": {
+        "dialCode": "+372",
+        "name": "إستونيا"
+      },
+      "ET(map)": {
+        "dialCode": "+251",
+        "name": "إثيوبيا"
+      },
+      "FK(map)": {
+        "dialCode": "+500",
+        "name": "جزر فوكلاند"
+      },
+      "FO(map)": {
+        "dialCode": "+298",
+        "name": "جزر فارو"
+      },
+      "FJ(map)": {
+        "dialCode": "+679",
+        "name": "فيجي"
+      },
+      "FI(map)": {
+        "dialCode": "+358",
+        "name": "فنلندا"
+      },
+      "FR(map)": {
+        "dialCode": "+33",
+        "name": "فرنسا"
+      },
+      "GF(map)": {
+        "dialCode": "+594",
+        "name": "غويانا الفرنسية"
+      },
+      "PF(map)": {
+        "dialCode": "+689",
+        "name": "بولينيزيا الفرنسية"
+      },
+      "GA(map)": {
+        "dialCode": "+241",
+        "name": "الجابون"
+      },
+      "GM(map)": {
+        "dialCode": "+220",
+        "name": "غامبيا"
+      },
+      "GE(map)": {
+        "dialCode": "+995",
+        "name": "جورجيا"
+      },
+      "DE(map)": {
+        "dialCode": "+49",
+        "name": "ألمانيا"
+      },
+      "GH(map)": {
+        "dialCode": "+233",
+        "name": "غانا"
+      },
+      "GI(map)": {
+        "dialCode": "+350",
+        "name": "جبل طارق"
+      },
+      "GR(map)": {
+        "dialCode": "+30",
+        "name": "اليونان"
+      },
+      "GL(map)": {
+        "dialCode": "+299",
+        "name": "جرينلاند"
+      },
+      "GD(map)": {
+        "dialCode": "+1473",
+        "name": "غرينادا"
+      },
+      "GP(map)": {
+        "dialCode": "+590",
+        "name": "جوادلوب"
+      },
+      "GU(map)": {
+        "dialCode": "+1671",
+        "name": "غوام"
+      },
+      "GT(map)": {
+        "dialCode": "+502",
+        "name": "غواتيمالا"
+      },
+      "GG(map)": {
+        "dialCode": "+44",
+        "name": "غيرنزي"
+      },
+      "GN(map)": {
+        "dialCode": "+224",
+        "name": "غينيا"
+      },
+      "GW(map)": {
+        "dialCode": "+245",
+        "name": "غينيا بيساو"
+      },
+      "GY(map)": {
+        "dialCode": "+592",
+        "name": "غيانا"
+      },
+      "HT(map)": {
+        "dialCode": "+509",
+        "name": "هايتي"
+      },
+      "HN(map)": {
+        "dialCode": "+504",
+        "name": "هندوراس"
+      },
+      "HK(map)": {
+        "dialCode": "+852",
+        "name": "هونغ كونغ"
+      },
+      "HU(map)": {
+        "dialCode": "+36",
+        "name": "المجر"
+      },
+      "IS(map)": {
+        "dialCode": "+354",
+        "name": "آيسلندا"
+      },
+      "IN(map)": {
+        "dialCode": "+91",
+        "name": "الهند"
+      },
+      "ID(map)": {
+        "dialCode": "+62",
+        "name": "إندونيسيا"
+      },
+      "IR(map)": {
+        "dialCode": "+98",
+        "name": "إيران"
+      },
+      "IQ(map)": {
+        "dialCode": "+964",
+        "name": "العراق"
+      },
+      "IE(map)": {
+        "dialCode": "+353",
+        "name": "أيرلندا"
+      },
+      "IM(map)": {
+        "dialCode": "+44",
+        "name": "جزيرة مان"
+      },
+      "IL(map)": {
+        "dialCode": "+972",
+        "name": "إسرائيل"
+      },
+      "IT(map)": {
+        "dialCode": "+39",
+        "name": "إيطاليا"
+      },
+      "CI(map)": {
+        "dialCode": "+225",
+        "name": "ساحل العاج"
+      },
+      "JM(map)": {
+        "dialCode": "+1876",
+        "name": "جامايكا"
+      },
+      "JP(map)": {
+        "dialCode": "+81",
+        "name": "اليابان"
+      },
+      "JE(map)": {
+        "dialCode": "+44",
+        "name": "جيرسي"
+      },
+      "JO(map)": {
+        "dialCode": "+962",
+        "name": "الأردن"
+      },
+      "KZ(map)": {
+        "dialCode": "+7",
+        "name": "كازاخستان"
+      },
+      "KE(map)": {
+        "dialCode": "+254",
+        "name": "كينيا"
+      },
+      "KI(map)": {
+        "dialCode": "+686",
+        "name": "كيريباتي"
+      },
+      "XK(map)": {
+        "dialCode": "+383",
+        "name": "كوسوفو"
+      },
+      "KW(map)": {
+        "dialCode": "+965",
+        "name": "الكويت"
+      },
+      "KG(map)": {
+        "dialCode": "+996",
+        "name": "قيرغيزستان"
+      },
+      "LA(map)": {
+        "dialCode": "+856",
+        "name": "لاوس"
+      },
+      "LV(map)": {
+        "dialCode": "+371",
+        "name": "لاتفيا"
+      },
+      "LB(map)": {
+        "dialCode": "+961",
+        "name": "لبنان"
+      },
+      "LS(map)": {
+        "dialCode": "+266",
+        "name": "ليسوتو"
+      },
+      "LR(map)": {
+        "dialCode": "+231",
+        "name": "ليبيريا"
+      },
+      "LY(map)": {
+        "dialCode": "+218",
+        "name": "ليبيا"
+      },
+      "LI(map)": {
+        "dialCode": "+423",
+        "name": "ليختنشتاين"
+      },
+      "LT(map)": {
+        "dialCode": "+370",
+        "name": "ليتوانيا"
+      },
+      "LU(map)": {
+        "dialCode": "+352",
+        "name": "لوكسمبورغ"
+      },
+      "MO(map)": {
+        "dialCode": "+853",
+        "name": "ماكاو"
+      },
+      "MK(map)": {
+        "dialCode": "+389",
+        "name": "مقدونيا"
+      },
+      "MG(map)": {
+        "dialCode": "+261",
+        "name": "مدغشقر"
+      },
+      "MW(map)": {
+        "dialCode": "+265",
+        "name": "مالاوي"
+      },
+      "MY(map)": {
+        "dialCode": "+60",
+        "name": "ماليزيا"
+      },
+      "MV(map)": {
+        "dialCode": "+960",
+        "name": "جزر المالديف"
+      },
+      "ML(map)": {
+        "dialCode": "+223",
+        "name": "مالي"
+      },
+      "MT(map)": {
+        "dialCode": "+356",
+        "name": "مالطا"
+      },
+      "MH(map)": {
+        "dialCode": "+692",
+        "name": "جزر المارشال"
+      },
+      "MQ(map)": {
+        "dialCode": "+596",
+        "name": "مارتينيك"
+      },
+      "MR(map)": {
+        "dialCode": "+222",
+        "name": "موريتانيا"
+      },
+      "MU(map)": {
+        "dialCode": "+230",
+        "name": "موريشيوس"
+      },
+      "YT(map)": {
+        "dialCode": "+262",
+        "name": "مايوت"
+      },
+      "MX(map)": {
+        "dialCode": "+52",
+        "name": "المكسيك"
+      },
+      "FM(map)": {
+        "dialCode": "+691",
+        "name": "ميكرونيزيا"
+      },
+      "MD(map)": {
+        "dialCode": "+373",
+        "name": "مولدوفا"
+      },
+      "MC(map)": {
+        "dialCode": "+377",
+        "name": "موناكو"
+      },
+      "MN(map)": {
+        "dialCode": "+976",
+        "name": "منغوليا"
+      },
+      "ME(map)": {
+        "dialCode": "+382",
+        "name": "الجبل الأسود"
+      },
+      "MS(map)": {
+        "dialCode": "+1664",
+        "name": "مونتسيرات"
+      },
+      "MA(map)": {
+        "dialCode": "+212",
+        "name": "المغرب"
+      },
+      "MZ(map)": {
+        "dialCode": "+258",
+        "name": "موزمبيق"
+      },
+      "MM(map)": {
+        "dialCode": "+95",
+        "name": "ميانمار"
+      },
+      "NA(map)": {
+        "dialCode": "+264",
+        "name": "ناميبيا"
+      },
+      "NR(map)": {
+        "dialCode": "+674",
+        "name": "ناورو"
+      },
+      "NP(map)": {
+        "dialCode": "+977",
+        "name": "نيبال"
+      },
+      "NL(map)": {
+        "dialCode": "+31",
+        "name": "هولندا"
+      },
+      "AN(map)": {
+        "dialCode": "+599",
+        "name": "جزر الأنتيل الهولندية"
+      },
+      "NC(map)": {
+        "dialCode": "+687",
+        "name": "كاليدونيا الجديدة"
+      },
+      "NZ(map)": {
+        "dialCode": "+64",
+        "name": "نيوزيلندا"
+      },
+      "NI(map)": {
+        "dialCode": "+505",
+        "name": "نيكاراغوا"
+      },
+      "NE(map)": {
+        "dialCode": "+227",
+        "name": "النيجر"
+      },
+      "NG(map)": {
+        "dialCode": "+234",
+        "name": "نيجيريا"
+      },
+      "NU(map)": {
+        "dialCode": "+683",
+        "name": "نيوي"
+      },
+      "NF(map)": {
+        "dialCode": "+672",
+        "name": "جزيرة نورفولك"
+      },
+      "KP(map)": {
+        "dialCode": "+850",
+        "name": "كوريا الشمالية"
+      },
+      "MP(map)": {
+        "dialCode": "+1670",
+        "name": "جزر ماريانا الشمالية"
+      },
+      "NO(map)": {
+        "dialCode": "+47",
+        "name": "النرويج"
+      },
+      "OM(map)": {
+        "dialCode": "+968",
+        "name": "عمان"
+      },
+      "PK(map)": {
+        "dialCode": "+92",
+        "name": "باكستان"
+      },
+      "PW(map)": {
+        "dialCode": "+680",
+        "name": "بالاو"
+      },
+      "PS(map)": {
+        "dialCode": "+970",
+        "name": "فلسطين"
+      },
+      "PA(map)": {
+        "dialCode": "+507",
+        "name": "بنما"
+      },
+      "PG(map)": {
+        "dialCode": "+675",
+        "name": "بابوا غينيا الجديدة"
+      },
+      "PY(map)": {
+        "dialCode": "+595",
+        "name": "باراغواي"
+      },
+      "PE(map)": {
+        "dialCode": "+51",
+        "name": "بيرو"
+      },
+      "PH(map)": {
+        "dialCode": "+63",
+        "name": "الفيلبين"
+      },
+      "PL(map)": {
+        "dialCode": "+48",
+        "name": "بولندا"
+      },
+      "PT(map)": {
+        "dialCode": "+351",
+        "name": "البرتغال"
+      },
+      "PR(map)": {
+        "dialCode": "+1",
+        "name": "بورتوريكو"
+      },
+      "QA(map)": {
+        "dialCode": "+974",
+        "name": "قطر"
+      },
+      "RE(map)": {
+        "dialCode": "+262",
+        "name": "ريونيون"
+      },
+      "RO(map)": {
+        "dialCode": "+40",
+        "name": "رومانيا"
+      },
+      "RU(map)": {
+        "dialCode": "+7",
+        "name": "روسيا"
+      },
+      "RW(map)": {
+        "dialCode": "+250",
+        "name": "رواندا"
+      },
+      "BL(map)": {
+        "dialCode": "+590",
+        "name": "سان بارتيليمي"
+      },
+      "SH(map)": {
+        "dialCode": "+290",
+        "name": "سانت هيلينا"
+      },
+      "KN(map)": {
+        "dialCode": "+1869",
+        "name": "سانت كيتس ونيفيس"
+      },
+      "LC(map)": {
+        "dialCode": "+1758",
+        "name": "سانت لوسيا"
+      },
+      "MF(map)": {
+        "dialCode": "+590",
+        "name": "سانت م ارتن"
+      },
+      "PM(map)": {
+        "dialCode": "+508",
+        "name": "سانت بيير وميكولون"
+      },
+      "VC(map)": {
+        "dialCode": "+1784",
+        "name": "سانت فنسنت والغرينادين"
+      },
+      "WS(map)": {
+        "dialCode": "+685",
+        "name": "ساموا"
+      },
+      "SM(map)": {
+        "dialCode": "+378",
+        "name": "سان مارينو"
+      },
+      "ST(map)": {
+        "dialCode": "+239",
+        "name": "ساو تومي وبرينسيب"
+      },
+      "SA(map)": {
+        "dialCode": "+966",
+        "name": "المملكة العربية السعودية"
+      },
+      "SN(map)": {
+        "dialCode": "+221",
+        "name": "السنغال"
+      },
+      "RS(map)": {
+        "dialCode": "+381",
+        "name": "صربيا"
+      },
+      "SC(map)": {
+        "dialCode": "+248",
+        "name": "سيشل"
+      },
+      "SL(map)": {
+        "dialCode": "+232",
+        "name": "سيراليون"
+      },
+      "SG(map)": {
+        "dialCode": "+65",
+        "name": "سنغافورة"
+      },
+      "SX(map)": {
+        "dialCode": "+1721",
+        "name": "سينت مارتن"
+      },
+      "SK(map)": {
+        "dialCode": "+421",
+        "name": "سلوفاكيا"
+      },
+      "SI(map)": {
+        "dialCode": "+386",
+        "name": "سلوفينيا"
+      },
+      "SB(map)": {
+        "dialCode": "+677",
+        "name": "جزر سليمان"
+      },
+      "SO(map)": {
+        "dialCode": "+252",
+        "name": "الصومال"
+      },
+      "ZA(map)": {
+        "dialCode": "+27",
+        "name": "جنوب أفريقيا"
+      },
+      "KR(map)": {
+        "dialCode": "+82",
+        "name": "كوريا الجنوبية"
+      },
+      "SS(map)": {
+        "dialCode": "+211",
+        "name": "جنوب السودان"
+      },
+      "ES(map)": {
+        "dialCode": "+34",
+        "name": "إسبانيا"
+      },
+      "LK(map)": {
+        "dialCode": "+94",
+        "name": "سريلانكا"
+      },
+      "SD(map)": {
+        "dialCode": "+249",
+        "name": "السودان"
+      },
+      "SR(map)": {
+        "dialCode": "+597",
+        "name": "سورينام"
+      },
+      "SJ(map)": {
+        "dialCode": "+47",
+        "name": "سفالبارد ويان ماين"
+      },
+      "SZ(map)": {
+        "dialCode": "+268",
+        "name": "سوازيلاند"
+      },
+      "SE(map)": {
+        "dialCode": "+46",
+        "name": "السويد"
+      },
+      "CH(map)": {
+        "dialCode": "+41",
+        "name": "سويسرا"
+      },
+      "SY(map)": {
+        "dialCode": "+963",
+        "name": "سوريا"
+      },
+      "TW(map)": {
+        "dialCode": "+886",
+        "name": "تايوان"
+      },
+      "TJ(map)": {
+        "dialCode": "+992",
+        "name": "طاجيكستان"
+      },
+      "TZ(map)": {
+        "dialCode": "+255",
+        "name": "تنزانيا"
+      },
+      "TH(map)": {
+        "dialCode": "+66",
+        "name": "تايلاند"
+      },
+      "TL(map)": {
+        "dialCode": "+670",
+        "name": "تيمور الشرقية"
+      },
+      "TG(map)": {
+        "dialCode": "+228",
+        "name": "توجو"
+      },
+      "TK(map)": {
+        "dialCode": "+690",
+        "name": "توكيلو"
+      },
+      "TO(map)": {
+        "dialCode": "+676",
+        "name": "تونغا"
+      },
+      "TT(map)": {
+        "dialCode": "+1868",
+        "name": "ترينيداد وتوباغو"
+      },
+      "TN(map)": {
+        "dialCode": "+216",
+        "name": "تونس"
+      },
+      "TR(map)": {
+        "dialCode": "+90",
+        "name": "تركيا"
+      },
+      "TM(map)": {
+        "dialCode": "+993",
+        "name": "تركمانستان"
+      },
+      "TC(map)": {
+        "dialCode": "+1649",
+        "name": "جزر توركس وكايكوس"
+      },
+      "TV(map)": {
+        "dialCode": "+688",
+        "name": "توفالو"
+      },
+      "UG(map)": {
+        "dialCode": "+256",
+        "name": "أوغندا"
+      },
+      "UA(map)": {
+        "dialCode": "+380",
+        "name": "أوكرانيا"
+      },
+      "AE(map)": {
+        "dialCode": "+971",
+        "name": "الإمارات العربية المتحدة"
+      },
+      "GB(map)": {
+        "dialCode": "+44",
+        "name": "المملكة المتحدة"
+      },
+      "US(map)": {
+        "dialCode": "+1",
+        "name": "الولايات المتحدة"
+      },
+      "UY(map)": {
+        "dialCode": "+598",
+        "name": "أوروغواي"
+      },
+      "UZ(map)": {
+        "dialCode": "+998",
+        "name": "أوزبكستان"
+      },
+      "VU(map)": {
+        "dialCode": "+678",
+        "name": "فانواتو"
+      },
+      "VA(map)": {
+        "dialCode": "+39",
+        "name": "الفاتيكان"
+      },
+      "VE(map)": {
+        "dialCode": "+58",
+        "name": "فنزويلا"
+      },
+      "VN(map)": {
+        "dialCode": "+84",
+        "name": "فيتنام"
+      },
+      "VG(map)": {
+        "dialCode": "+1284",
+        "name": "جزر فيرجن البريطانية"
+      },
+      "VI(map)": {
+        "dialCode": "+1340",
+        "name": "جزر فيرجن الأمريكية"
+      },
+      "WF(map)": {
+        "dialCode": "+681",
+        "name": "والس وفوتونا"
+      },
+      "YE(map)": {
+        "dialCode": "+967",
+        "name": "اليمن"
+      },
+      "ZM(map)": {
+        "dialCode": "+260",
+        "name": "زامبيا"
+      },
+      "ZW(map)": {
+        "dialCode": "+263",
+        "name": "زيمبابوي"
+      }
+    }
+  }
+}
+

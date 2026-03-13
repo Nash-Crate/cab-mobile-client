@@ -1,0 +1,36 @@
+{
+  "login": {
+    "welcome": "Welcome to MauriCab",
+    "letsStart": "Let's Start! Enter Your Phone Number"
+  },
+  "registration": {
+    "title": "Registration",
+    "phoneNumber": "Enter Phone Number",
+    "fullName": {
+      "label": "Full Name",
+      "hint": "John Doe"
+    },
+    "firstName": {
+      "label": "First Name",
+      "hint": "John"
+    },
+    "lastName": {
+      "label": "Last Name",
+      "hint": "Doe"
+    },
+    "gender": "Choose your gender",
+    "tAndC(rich)": "I have read and accept the ${tapHere(Terms of Use)}",
+    "actions": {
+      "signUp": "Sign Up"
+    }
+  },
+  "verification": {
+    "codeSent": "We sent you an SMS code",
+    "onNumber(rich)": "On number : ${number(phoneNumberPlaceHolder)}",
+    "enterCode": "Please enter the 6-digit verification code",
+    "notReceived(rich)": "Didn't receive the code? ${resend(Resend)}",
+    "actions": {
+      "verify": "Verify"
+    }
+  }
+}

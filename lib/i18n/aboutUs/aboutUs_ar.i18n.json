@@ -1,0 +1,36 @@
+{
+  "title": "About us",
+  "header": {
+    "bgTitle": "Connecting You to a Better Ride",
+    "title": "MauriCab"
+  },
+  "welcome": {
+    "title(rich)": "Welcome to ${title(MauriCab)}",
+    "description": "Your trusted partner for safe and convenient transportation across Mauritania. We are more than just a ride-sharing app, we are your go-to solution for hassle-free travel, connecting you to reliable drivers, comfortable vehicles, and quality service."
+  },
+  "mission": {
+    "title": "Our Mission",
+    "description": "At MauriCab, our mission is simple yet profound: to make transportation accessible, affordable, and secure for every Mauritanian. We strive to enhance the mobility of our community by offering a seamless, trustworthy, and enjoyable travel experience."
+  },
+  "serve": {
+    "title": "How We Serve You",
+    "steps": {
+      "booking": {
+        "title": "Easy Booking",
+        "description": "With a few taps, you can book a ride to any destination in Mauritania."
+      },
+      "drivers": {
+        "title": "Local Drivers",
+        "description": "Your driver is not just a chauffeur, they are part of your community."
+      },
+      "tracking": {
+        "title": "Real-Time Tracking",
+        "description": "Stay in control of your journey. Track your ride in real-time on our map"
+      },
+      "payment": {
+        "title": "Flexible Payment Options",
+        "description": "We offer various payment methods to suit your preferences"
+      }
+    }
+  }
+}

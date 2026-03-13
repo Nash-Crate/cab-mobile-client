@@ -1,0 +1,54 @@
+{
+  "options": {
+    "vehicleClass": {
+      "title": "Choose Ride Type",
+      "classes": {
+        "standard": "Standard\nClass",
+        "vip": "VIP\nClass"
+      }
+    },
+    "payMethod": {
+      "title": "Payment Method",
+      "methods": {
+        "cash": "Cash",
+        "bankili": "Bankili",
+        "sedad": "Sedad"
+      }
+    },
+    "yourTrip": {
+      "title": "Your Trip"
+    },
+    "lookingForDriver": {
+      "title": "Looking for a driver",
+      "subtitle": "it may take some time"
+    },
+    "arriving": {
+      "title": "Arriving.."
+    },
+    "arrived": {
+      "title": "Driver Arrived",
+      "subtitle": "Waiting for you"
+    },
+    "onTheWay": {
+      "title": "On The Way",
+      "details": {
+        "view": "View Trip Details",
+        "hide": "Hide Trip Details"
+      }
+    },
+    "complete": {
+      "title": "Arrived to your Destination",
+      "actions": {
+        "back": "Back to Home"
+      }
+    },
+    "shared": {
+      "pickUp": "Pickup Location",
+      "dropOff": "Drop-off Location",
+      "actions": {
+        "letsGo": "Let's Go",
+        "cancel": "Cancel"
+      }
+    }
+  }
+}

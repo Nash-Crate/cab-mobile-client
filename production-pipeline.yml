@@ -1,0 +1,21 @@
+# Android
+# Build your Android project with Gradle.
+# Add steps that test, sign, and distribute the APK, save build artifacts, and more:
+# https://docs.microsoft.com/azure/devops/pipelines/languages/android
+
+trigger:
+  - main
+
+pool: monasha-m3
+
+variables:
+- group: Production
+
+steps:
+  - task: DownloadSecureFile@1
+    inputs:
+        secureFile: 'upload-keystore.jks'
+
+  - script: fastlane production
+    workingDirectory: android/
+    displayName: "Build [production] android apk"

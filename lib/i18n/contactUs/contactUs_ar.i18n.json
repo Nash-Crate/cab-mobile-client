@@ -1,0 +1,22 @@
+{
+  "title": "Contact us",
+  "description": "Contact us through the provided form or get in touch using the information below.",
+  "support": {
+    "phone": "Support\nPhone Number",
+    "email": "Support\nEmail"
+  },
+  "form": {
+    "phone": {
+      "label": "Phone Number",
+      "hint": "777 777 777"
+    },
+    "email": {
+      "label": "Email",
+      "hint": "user@example.com"
+    },
+    "message": {
+      "label": "Message",
+      "hint": "Message"
+    }
+  }
+}

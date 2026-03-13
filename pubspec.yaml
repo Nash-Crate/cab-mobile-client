@@ -1,0 +1,165 @@
+name: mobile_client
+description: "The Flutter mobile app project for the MauriCabs Client service"
+
+publish_to: 'none' # Remove this line if you wish to publish to pub.dev
+
+version: 0.0.8+8
+
+environment:
+  sdk: '>=3.8.0 <4.0.0'
+  flutter: '>=3.29.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  # annotations
+  freezed_annotation: ^3.1.0
+  json_annotation: ^4.9.0
+
+  # api utils
+  dio: ^5.9.0
+
+  # caching
+  shared_preferences: ^2.5.3
+
+  # DI
+  get_it: ^8.2.0
+  injectable: ^2.5.1
+
+  # functional
+  fpdart: ^1.1.1
+
+  # i18n
+  flutter_localizations:
+    sdk: flutter
+  intl: ^0.20.2
+  slang: ^4.8.1
+  slang_flutter: ^4.8.0
+
+  # icons
+  cupertino_icons: ^1.0.8
+
+  # image utils
+  cached_network_image: ^3.4.1
+  flutter_svg: ^2.2.0
+
+  # mocking
+  http_mock_adapter: ^0.6.1
+
+  # routing
+  go_router: ^16.2.0
+
+  # state management
+  flutter_bloc: ^9.1.1
+
+  # UI helpers
+  #  flutter_local_notifications: ^18.0.0
+  flutter_screenutil: ^5.9.3
+
+  # UI components
+  bot_toast: ^4.1.3
+  carousel_slider: ^5.1.1
+  flutter_polyline_points: ^3.0.1
+  geolocator: ^14.0.2
+  google_maps_flutter: ^2.12.3
+  pin_code_fields: ^8.0.1
+  sliver_tools: ^0.2.12
+  smooth_page_indicator: ^1.2.1
+
+  # utils
+  device_region: ^1.4.0
+  flow_builder: ^0.1.0
+  google_fonts: ^6.3.1
+  internet_connection_checker_plus: ^2.7.2
+  location: ^8.0.1
+  logger: ^2.6.1
+  phonecodes: ^0.0.4
+  url_launcher: ^6.3.2
+  validators: ^3.0.0
+
+  # custom
+  mobile_library:
+    path: ../mauricab-mobile-library
+#    hosted: https://dart.cloudsmith.io/monasha-org/test_mauri_cab_library/
+#    version: 0.0.1
+
+dev_dependencies:
+  # code analyzers
+  very_good_analysis: ^9.0.0
+
+  # generators
+  build_runner: ^2.7.0
+  flutter_launcher_icons: ^0.14.4
+  freezed: ^3.2.0
+  injectable_generator: ^2.8.1
+  json_serializable: ^6.11.0
+
+  # testing
+  flutter_test:
+    sdk: flutter
+  integration_test:
+    sdk: flutter
+  bloc_test: ^10.0.0
+  mockito: ^5.5.0
+
+dependency_overrides:
+  meta: ^1.17.0
+
+flutter:
+  uses-material-design: true
+  assets:
+    - assets/
+    - assets/svg/
+    - assets/svg/about_us/
+    - assets/svg/auth/
+    - assets/svg/contact_us/
+    - assets/svg/home/
+    - assets/svg/home/drawer/
+    - assets/svg/onboarding/
+    - assets/svg/splash/
+    - assets/svg/trip_history/
+    - assets/image/
+    - assets/image/about_us/
+    - assets/image/auth/
+    - assets/image/home/trip/
+    - assets/image/ride/
+    - assets/fonts/
+    - assets/fonts/proxima-nova/
+    - assets/image/home/
+    - assets/svg/ride/
+    - assets/svg/common/
+
+  fonts:
+    - family: ProximaNova
+      fonts:
+        - asset: assets/fonts/proxima-nova/ProximaNova-Black.ttf
+        - asset: assets/fonts/proxima-nova/ProximaNovaT-Thin.ttf
+          weight: 200
+        - asset: assets/fonts/proxima-nova/ProximaNova-Light.ttf
+          weight: 300
+        - asset: assets/fonts/proxima-nova/ProximaNova-Regular.ttf
+          weight: 400
+        - asset: assets/fonts/proxima-nova/ProximaNova-SemiBold.ttf
+          weight: 600
+        - asset: assets/fonts/proxima-nova/ProximaNova-Bold.ttf
+          weight: 700
+        - asset: assets/fonts/proxima-nova/ProximaNova-ExtraBold.ttf
+          weight: 900
+
+
+flutter_assets_generator:
+  # Optional. Sets the directory of generated localization files. Provided value should be a valid path on lib dir. Default: generated
+  output_dir: presentation/constants/
+  # Optional. Sets whether automatic monitoring of file changes. Default: true
+  auto_detection: true
+  # Optional. Sets file name conversion rules. Default: true
+  named_with_parent: true
+  # Optional. Sets the name for the generated localization file. Default: assets
+  output_filename: assets.generated
+  # Optional. Sets the name for the generated localization class. Default: Assets
+  class_name: Assets
+  # Optional. Sets the filename split pattern for filename split. Default: [-_]
+  filename_split_pattern: "[-_]"
+  # Optional. Configuring ignore paths. Default: [],e.g: ["assets/fonts", "assets/images/dark", ...]
+  path_ignore: [ ]

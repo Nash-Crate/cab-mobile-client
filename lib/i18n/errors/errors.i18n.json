@@ -1,0 +1,49 @@
+{
+  "title": "Error",
+  "actions": {
+    "text": "Action failed",
+    "failed": "$action failed",
+    "failed_extra": "$action failed, $extra"
+  },
+  "validations": {
+    "dropdown": "Please Select a valid option"
+  },
+  "fields": {
+    "input": "Please Enter a valid $field",
+    "select": "Please Select a valid $field",
+    "minChar": "Your $field should contain at-least $min characters.",
+    "maxChar": "Your $field should not exceed $max characters.",
+    "password": "Your $field must contain at-least, $min characters, one uppercase letter, one numeric value.",
+    "confirm": "Your $field doesn't match with $confirmField.",
+    "required": "$field field is required."
+  },
+  "failures": {
+    "cache": {
+      "clear": "Failed to clear the caches",
+      "get": "Failed to retrieve cache",
+      "noAuth": "No previous logged in sessions found.",
+      "set": "Failed to cache data"
+    },
+    "token": {
+      "expired": "Session expired.",
+      "noPreviousAuth": "No previous logged in sessions found.",
+      "invalid": "Invalid token"
+    },
+    "formatException": "Unable to process the data",
+    "noInternet": "No working internet connections found.",
+    "somethingWentWrong": "Something Went Wrong.",
+    "unableToProcess": "Unable to process",
+    "unauthorized": "Unauthorized.",
+    "unexpectedError": "Unexpected error",
+    "unknownError": "Try again. Unknown error happened. We are working on this.",
+    "mqtt": {
+      "connectionRefused": "Failed to connect to the server!"
+    }
+  },
+  "location": {
+    "servicesDisabled": "Location services are disabled.",
+    "permissionsDenied": "Location permissions are denied",
+    "permissionsDeniedForever": "Location permissions are permanently denied, we cannot request permissions.",
+    "noRouteFound": "No route found."
+  }
+}
