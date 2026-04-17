@@ -9,7 +9,7 @@ import 'package:url_launcher/url_launcher.dart';
 const supportPhoneNumber = '+222 07 78 47 63 10';
 
 /// Support email
-const supportEmail = 'support@mauricab.com';
+const supportEmail = 'support@nashcrate.com';
 
 /// Contact us header
 class ContactUsHeader extends StatelessWidget {
@@ -40,7 +40,7 @@ class ContactUsHeader extends StatelessWidget {
                 child: ContactUsSupportCard(
                   title: t.contactUs.support.phone,
                   data: supportPhoneNumber,
-                  svgIcon: AppSvgImage(Assets.contactUsCalling, width: 80.w),
+                  svgIcon: AppSvgImage(Assets.contactUs.calling.path, width: 80.w),
                   onPressed: () async {
                     const notifyGroupKey = 'support';
                     clearAllGroupNotifications(notifyGroupKey);
@@ -63,7 +63,7 @@ class ContactUsHeader extends StatelessWidget {
                 child: ContactUsSupportCard(
                   title: t.contactUs.support.email,
                   data: supportEmail,
-                  svgIcon: AppSvgImage(Assets.contactUsMail, width: 80.w),
+                  svgIcon: AppSvgImage(Assets.contactUs.mail.path, width: 80.w),
                   onPressed: () async {
                     const url = 'mailto:$supportEmail';
                     if (!await launchUrl(Uri.parse(url))) {

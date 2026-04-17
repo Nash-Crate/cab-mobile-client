@@ -45,8 +45,8 @@ class PreTripDetails extends StatelessWidget {
                               SizedBox(
                                 height: 200.h,
                                 width: 0.25.sw,
-                                child: const AppImage(
-                                  Assets.tripStandardClassCarCropped,
+                                child: AppImage(
+                                  Assets.home.trip.standardClassCarCropped.path,
                                   fit: BoxFit.contain,
                                 ),
                               ),
@@ -61,7 +61,7 @@ class PreTripDetails extends StatelessWidget {
                             bottom: 0,
                             left: 0,
                             child: AppSvgImage(
-                              Assets.commonArrow,
+                              Assets.common.arrow.path,
                               color: Colors.orange,
                               width: 60.h,
                             ),
@@ -82,14 +82,17 @@ class PreTripDetails extends StatelessWidget {
                               children: [
                                 const Text('Cash'),
                                 HSB(40.h),
-                                AppSvgImage(Assets.commonArrow, width: 60.h),
+                                AppSvgImage(Assets.common.arrow.path, width: 60.h),
                               ],
                             ),
                           ),
                           SizedBox(
                             height: 200.h,
                             width: 0.25.sw,
-                            child: const AppImage(Assets.tripPayMethodCash, fit: BoxFit.contain),
+                            child: AppImage(
+                              Assets.home.trip.payMethodCash.path,
+                              fit: BoxFit.contain,
+                            ),
                           ),
                         ],
                       ),

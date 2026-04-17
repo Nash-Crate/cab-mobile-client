@@ -2,3 +2,5 @@
 export 'app_configs_repository.dart';
 export 'auth_repository.dart';
 export 'i18n_repository.dart';
+export 'ride_repository.dart';
+export 'trip_history_repository.dart';

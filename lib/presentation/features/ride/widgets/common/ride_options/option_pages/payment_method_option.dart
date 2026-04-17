@@ -54,7 +54,7 @@ class _PaymentMethodOptionState extends State<PaymentMethodOption> {
                         SizedBox(
                           width: .4.sw,
                           height: .2.sw,
-                          child: const AppImage(Assets.tripPayMethodCash),
+                          child: AppImage(Assets.home.trip.payMethodCash.path),
                         ),
                         HSB(10.sp),
                         Text(
@@ -79,7 +79,7 @@ class _PaymentMethodOptionState extends State<PaymentMethodOption> {
                         SizedBox(
                           width: .4.sw,
                           height: .2.sw,
-                          child: const AppImage(Assets.tripPayMethodBankili),
+                          child: AppImage(Assets.home.trip.payMethodBankili.path),
                         ),
                         HSB(10.sp),
                         Text(
@@ -104,7 +104,7 @@ class _PaymentMethodOptionState extends State<PaymentMethodOption> {
                         SizedBox(
                           width: .4.sw,
                           height: .2.sw,
-                          child: const AppImage(Assets.tripPayMethodSedad),
+                          child: AppImage(Assets.home.trip.payMethodSedad.path),
                         ),
                         HSB(10.sp),
                         Text(

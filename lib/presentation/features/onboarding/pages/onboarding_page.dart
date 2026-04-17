@@ -24,10 +24,10 @@ class OnboardingPage extends StatelessWidget {
           children: [
             Expanded(
               child: FilledButton(
-                onPressed: () {
+                onPressed: () async {
                   // set onboarding as viewed on this device
-                  context.read<OnboardingCubit>().onboardingViewed();
-                  context.go(AuthPage.path);
+                  await context.read<OnboardingCubit>().onboardingViewed();
+                  if (context.mounted) context.go(AuthPage.path);
                 },
                 child: Text(t.onboarding.actions.start),
               ),

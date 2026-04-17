@@ -17,7 +17,7 @@ class TripHistoryPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return BlocProvider(
-      create: (context) => getIt<TripHistoryCubit>()..fetch(),
+      create: (context) => getIt<TripHistoryCubit>(),
       child: Builder(
         builder: (context) {
           return AppScaffold(

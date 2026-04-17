@@ -123,8 +123,8 @@ class HowWeServeCard extends StatelessWidget {
                 height: 150.h,
                 child: AppSvgImage(
                   reverse
-                      ? Assets.aboutUsCircleArrowAntiClockwise
-                      : Assets.aboutUsCircleArrowClockwise,
+                      ? Assets.aboutUs.circleArrowAntiClockwise.path
+                      : Assets.aboutUs.circleArrowClockwise.path,
                 ),
               ),
             ),

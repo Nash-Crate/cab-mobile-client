@@ -1,8 +1,7 @@
-// JsonKey annotations for serialization
-// ignore_for_file: invalid_annotation_target
 import 'package:freezed_annotation/freezed_annotation.dart';
 
 part 'auth_tokens_model.freezed.dart';
+
 part 'auth_tokens_model.g.dart';
 
 /// Login response model

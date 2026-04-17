@@ -34,7 +34,7 @@ class AboutUsOurMission extends StatelessWidget {
                 ),
               ),
             ),
-            SizedBox(width: 300.w, child: const AppSvgImage(Assets.aboutUsCenterSeparator)),
+            SizedBox(width: 300.w, child: AppSvgImage(Assets.aboutUs.centerSeparator.path)),
             HSB(40.h),
             Text(
               t.aboutUs.mission.description,

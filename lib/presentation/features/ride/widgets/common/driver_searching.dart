@@ -15,10 +15,12 @@ class DriverSearching extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return BlocListener<RideCubit, RideState>(
-      listener: (context, state) {
+      listener: (context, state) async {
         if (state.driver != null) {
-          context.read<RideCubit>().driverFound(state.driver!.driverLocation);
-          context.flow<TripStateEnum>().update((_) => TripStateEnum.driverArriving);
+          await context.read<RideCubit>().driverFound(state.driver!.driverLocation);
+          if (context.mounted) {
+            context.flow<TripStateEnum>().update((_) => TripStateEnum.driverArriving);
+          }
         }
       },
       child: ClipRRect(
@@ -30,7 +32,7 @@ class DriverSearching extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 HSB(50.h),
-                AppSvgImage(Assets.rideMapMagnifier, width: .3.sw),
+                AppSvgImage(Assets.ride.mapMagnifier.path, width: .3.sw),
                 HSB(50.h),
                 Text(
                   t.ride.options.lookingForDriver.title,

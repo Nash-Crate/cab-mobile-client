@@ -18,7 +18,7 @@ abstract class IAuthRepository {
   /// Send a rider signup request to the server
   Future<Either<Failure, Unit>> riderSignUp(RiderSignUpParams params);
 
-  /// Check if previous auth tokens exists
+  /// Check if previous svg tokens exists
   Future<Either<Failure, bool>> checkAuth();
 
   /// Get the current user

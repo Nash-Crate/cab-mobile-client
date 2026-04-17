@@ -1,3 +1,5 @@
+import 'dart:async';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
@@ -33,11 +35,13 @@ class _SplashPageState extends State<SplashPage> {
   void initState() {
     super.initState();
 
+    // WidgetsBinding.instance.addPostFrameCallback((_) {
     // trigger cubit initialization
-    context.read<OnboardingCubit>().init();
-    context.read<AuthActionsCubit>().init();
+    unawaited(context.read<OnboardingCubit>().init());
+    unawaited(context.read<AuthActionsCubit>().init());
 
     _initialize();
+    // });
   }
 
   void _navigate() {
@@ -116,7 +120,7 @@ class _SplashPageState extends State<SplashPage> {
                 height: _bgScale.sh,
                 duration: const Duration(seconds: 2),
                 curve: Curves.fastOutSlowIn,
-                child: const AppSvgImage(Assets.splashMap),
+                child: AppSvgImage(Assets.splash.map.path),
               ),
             ),
             Center(

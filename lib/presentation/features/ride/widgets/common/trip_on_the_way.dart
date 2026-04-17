@@ -63,14 +63,14 @@ class TripOnTheWay extends StatelessWidget {
                   style: ElevatedButton.styleFrom(
                     backgroundColor: const Color.fromRGBO(255, 234, 170, 1),
                   ),
-                  child: AppSvgImage(Assets.commonCallIcon, width: 80.w, height: 80.h),
+                  child: AppSvgImage(Assets.common.callIcon.path, width: 80.w, height: 80.h),
                 ),
                 ElevatedButton(
                   onPressed: () {},
                   style: ElevatedButton.styleFrom(
                     backgroundColor: const Color.fromRGBO(255, 234, 170, 1),
                   ),
-                  child: AppSvgImage(Assets.commonMessageIcon, width: 80.w, height: 80.h),
+                  child: AppSvgImage(Assets.common.messageIcon.path, width: 80.w, height: 80.h),
                 ),
               ],
             ),

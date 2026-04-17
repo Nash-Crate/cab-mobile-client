@@ -45,11 +45,11 @@ class TripHistorySortByContent extends StatelessWidget {
                   (sortBy) => RadioListTile(
                     controlAffinity: ListTileControlAffinity.trailing,
                     value: sortBy,
-                    onChanged: (value) {
+                    onChanged: (value) async {
                       if (value != null) {
-                        context.read<TripHistoryCubit>().setSortBy(value);
+                        await context.read<TripHistoryCubit>().setSortBy(value);
                       }
-                      Navigator.of(context).pop();
+                      if (context.mounted) Navigator.of(context).pop();
                     },
                     groupValue: state.sortBy,
                     title: Text(

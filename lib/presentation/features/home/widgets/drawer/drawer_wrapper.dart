@@ -21,9 +21,9 @@ class DrawerWrapper extends StatelessWidget {
   final Widget body;
 
   /// Navigate and close drawer
-  void navigateAndCloseDrawer(BuildContext context, String route) {
-    context.push(route);
+  Future<void> navigateAndCloseDrawer(BuildContext context, String route) async {
     context.read<DrawerCubit>().toggleDrawer();
+    await context.push(route);
   }
 
   @override
@@ -31,43 +31,43 @@ class DrawerWrapper extends StatelessWidget {
     return BlocBuilder<DrawerCubit, DrawerState>(
       builder: (context, state) {
         return AppDrawerWrapper(
-          logoAsset: Assets.imageLogo,
+          logoAsset: Assets.logo.logo.path,
           isDrawerOpen: state is DrawerOpened,
           toggleDrawer: context.read<DrawerCubit>().toggleDrawer,
           body: body,
           itemsWidget: ListView(
             children: [
               DrawerListItem(
-                iconPath: Assets.drawerHome,
-                activeIconPath: Assets.drawerHomeActive,
+                iconPath: Assets.home.drawer.home.path,
+                activeIconPath: Assets.home.drawer.homeActive.path,
                 label: t.home.drawer.home,
                 isActive: GoRouter.of(context).location == HomePage.path,
                 onSelected: () => navigateAndCloseDrawer(context, HomePage.path),
               ),
               DrawerListItem(
-                iconPath: Assets.drawerTripHistory,
-                activeIconPath: Assets.drawerTripHistoryActive,
+                iconPath: Assets.home.drawer.tripHistory.path,
+                activeIconPath: Assets.home.drawer.tripHistoryActive.path,
                 label: t.home.drawer.tripHistory,
                 isActive: GoRouter.of(context).location == TripHistoryPage.path,
                 onSelected: () => navigateAndCloseDrawer(context, TripHistoryPage.path),
               ),
               DrawerListItem(
-                iconPath: Assets.drawerAboutUs,
-                activeIconPath: Assets.drawerAboutUsActive,
+                iconPath: Assets.home.drawer.aboutUs.path,
+                activeIconPath: Assets.home.drawer.aboutUsActive.path,
                 label: t.home.drawer.aboutUs,
                 isActive: GoRouter.of(context).location == AboutUsPage.path,
                 onSelected: () => navigateAndCloseDrawer(context, AboutUsPage.path),
               ),
               DrawerListItem(
-                iconPath: Assets.drawerContactUs,
-                activeIconPath: Assets.drawerContactUsActive,
+                iconPath: Assets.home.drawer.contactUs.path,
+                activeIconPath: Assets.home.drawer.contactUsActive.path,
                 label: t.home.drawer.contactUs,
                 isActive: GoRouter.of(context).location == ContactUsPage.path,
                 onSelected: () => navigateAndCloseDrawer(context, ContactUsPage.path),
               ),
               DrawerListItem(
-                iconPath: Assets.drawerSettings,
-                activeIconPath: Assets.drawerSettingsActive,
+                iconPath: Assets.home.drawer.settings.path,
+                activeIconPath: Assets.home.drawer.settingsActive.path,
                 label: t.home.drawer.settings,
                 isActive: GoRouter.of(context).location == SettingsPage.path,
                 onSelected: () => navigateAndCloseDrawer(context, SettingsPage.path),

@@ -1,3 +1,5 @@
+import 'dart:async';
+
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:injectable/injectable.dart';
@@ -5,13 +7,16 @@ import 'package:mobile_client/core/usecases/usecases.dart';
 import 'package:mobile_library/mobile_library.dart';
 
 part 'app_configs_cubit.freezed.dart';
+
 part 'app_configs_state.dart';
 
 /// App configs cubit
 @singleton
 class AppConfigsCubit extends Cubit<AppConfigsState> {
   /// constructor
-  AppConfigsCubit(this._getDevicePhoneCode) : super(AppConfigsState.initial());
+  AppConfigsCubit(this._getDevicePhoneCode) : super(AppConfigsState.initial()) {
+    unawaited(init());
+  }
 
   final GetDevicePhoneCode _getDevicePhoneCode;
 

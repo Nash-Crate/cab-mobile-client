@@ -27,9 +27,9 @@ class _TripHistoryContentState extends State<TripHistoryContent> {
     super.dispose();
   }
 
-  void _scrollListener() {
+  Future<void> _scrollListener() async {
     final cubit = context.read<TripHistoryCubit>();
-    if (_controller.position.extentAfter < 500 && cubit.state.hasMore) cubit.fetch();
+    if (_controller.position.extentAfter < 500 && cubit.state.hasMore) await cubit.fetch();
   }
 
   @override

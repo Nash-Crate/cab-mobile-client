@@ -7,7 +7,7 @@ import 'package:mobile_library/mobile_library.dart';
 
 /// Local datasource abstract interface for authentication
 abstract class AuthLocalDatasource {
-  /// Check if previous auth tokens exists
+  /// Check if previous svg tokens exists
   Future<Either<Failure, bool>> checkAuth();
 
   /// Cache token in local storage
@@ -31,8 +31,7 @@ class AuthLocalDatasourceImpl extends AuthLocalDatasource {
   @override
   Future<Either<Failure, bool>> checkAuth() async {
     try {
-      final result =
-          await _cacheStorage.read<String>(key: CacheKeys.token.name);
+      final result = await _cacheStorage.read<String>(key: CacheKeys.token.name);
       return Right(result != null);
     } on Exception catch (e) {
       return Left(InfraExceptions.exceptionToFailure(e));
@@ -62,8 +61,7 @@ class AuthLocalDatasourceImpl extends AuthLocalDatasource {
   @override
   Future<Either<Failure, AuthTokensModel?>> getToken() async {
     try {
-      final result =
-          await _cacheStorage.read<String>(key: CacheKeys.token.name);
+      final result = await _cacheStorage.read<String>(key: CacheKeys.token.name);
       if (result != null) {
         final tokensMap = jsonDecode(result) as Map<String, dynamic>;
         return Right(AuthTokensModel.fromJson(tokensMap));

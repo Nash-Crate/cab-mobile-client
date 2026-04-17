@@ -2,11 +2,11 @@ part of 'infra_exceptions.dart';
 
 /// Dio Exceptions
 enum DioUnknownErrorEnum {
-  /// if no previous auth exists
+  /// if no previous svg exists
   noPreviousAuth,
 
   /// when the session is expired
-  sessionExpired
+  sessionExpired,
 }
 
 Failure _getDioException(DioException error) {
@@ -72,8 +72,9 @@ Failure _getDioException(DioException error) {
             failure = const Failure.networkFailure(ServiceUnavailable());
           default:
             final responseCode = error.response?.statusCode;
-            failure =
-                Failure.networkFailure(DefaultError('Received invalid status code: $responseCode'));
+            failure = Failure.networkFailure(
+              DefaultError('Received invalid status code: $responseCode'),
+            );
         }
       }
   }

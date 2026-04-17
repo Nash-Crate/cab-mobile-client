@@ -15,7 +15,12 @@ class TripHistoryCardTimestamp extends StatelessWidget {
   Widget build(BuildContext context) {
     return Row(
       children: [
-        AppSvgImage(LibAssets.svgCalendar, width: 50.w, height: 50.h, package: 'mobile_library'),
+        AppSvgImage(
+          LibAssets.svg.calendar.path,
+          width: 50.w,
+          height: 50.h,
+          package: 'mobile_library',
+        ),
         WSB(30.w),
         Text(
           DateFormat('dd MMM yyyy, HH:mm').format(timestamp),

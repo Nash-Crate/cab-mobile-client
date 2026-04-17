@@ -26,7 +26,7 @@ class VerificationHeader extends StatelessWidget {
               Padding(
                 padding: EdgeInsets.symmetric(vertical: 50.h),
                 child: AppSvgImage(
-                  LibAssets.svgChevronLeft,
+                  LibAssets.svg.chevronLeft.path,
                   alignment: Alignment.centerLeft,
                   height: 80.h,
                   width: 180.w,
@@ -47,16 +47,16 @@ class VerificationHeader extends StatelessWidget {
           child: Stack(
             alignment: Alignment.topCenter,
             children: [
-              AppImage(Assets.authVerificationBackdrop, height: 458.h, width: 675.w),
+              AppImage(Assets.auth.verificationBackdrop.path, height: 458.h, width: 675.w),
               Positioned(
                 top: 100.h,
-                child: AppSvgImage(Assets.authVerification, height: 482.h, width: 455.w),
+                child: AppSvgImage(Assets.auth.verification.path, height: 482.h, width: 455.w),
               ),
               Positioned(
                 top: 570.h,
                 child: SizedBox(
                   width: .35.sw,
-                  child: const AppImage(Assets.authVerificationEllipse),
+                  child: AppImage(Assets.auth.verificationEllipse.path),
                 ),
               ),
             ],

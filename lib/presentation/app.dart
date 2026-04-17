@@ -31,13 +31,15 @@ class _AppState extends State<App> {
 
     WidgetsBinding.instance.addPostFrameCallback((_) async {
       // pre-cache asset images
-      _preCacheAssetImages();
+      await _preCacheAssetImages();
     });
   }
 
-  void _preCacheAssetImages() {
-    precacheImage(const AssetImage(Assets.imageLogo), context);
-    precacheImage(const AssetImage(Assets.authHeaderBg), context);
+  Future<void> _preCacheAssetImages() async {
+    await Future.wait([
+      precacheImage(AssetImage(Assets.logo.logo.path), context),
+      precacheImage(AssetImage(Assets.auth.headerBg.path), context),
+    ]);
   }
 
   @override
@@ -46,8 +48,8 @@ class _AppState extends State<App> {
     return TranslationProvider(
       child: MultiBlocProvider(
         providers: [
-          BlocProvider(create: (context) => getIt<AppConfigsCubit>()..init(), lazy: false),
-          BlocProvider(create: (context) => getIt<I18nCubit>()..init()),
+          BlocProvider(create: (context) => getIt<AppConfigsCubit>(), lazy: false),
+          BlocProvider(create: (context) => getIt<I18nCubit>()),
           BlocProvider(create: (context) => getIt<OnboardingCubit>()),
           BlocProvider(create: (context) => getIt<AuthActionsCubit>()),
           BlocProvider(create: (context) => getIt<DrawerCubit>()),

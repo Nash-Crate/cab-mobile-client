@@ -18,14 +18,15 @@ class ContactUsForm extends StatelessWidget {
           BorderWrapper(
             child: PhoneNumberField(
               controller: TextEditingController(text: 'TODO'),
-              callingCode: '+94', // TODO(contactUs): callingCode
+              callingCode: '+94',
+              // TODO(contactUs): callingCode
               label: t.contactUs.form.phone.label,
               hint: t.contactUs.form.phone.hint,
               isFloatingLabel: true,
-              onChanged: (String value) {
+              onChanged: (value) {
                 // TODO(contactUs): onChange
               },
-              onCountryChanged: (String value) {
+              onCountryChanged: (value) {
                 // TODO(contactUs): onCountryChanged
               },
             ),

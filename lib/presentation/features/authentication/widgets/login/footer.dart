@@ -31,9 +31,9 @@ class LoginFooter extends StatelessWidget {
                       return LanguageSelectView(
                         activeLocale: activeLocale,
                         appLocales: AppLocale.values.map((a) => a.languageCode).toList(),
-                        onSelected: (locale) {
-                          context.read<I18nCubit>().changeAppLocale(locale);
-                          Navigator.pop(context);
+                        onSelected: (locale) async {
+                          await context.read<I18nCubit>().changeAppLocale(locale);
+                          if (context.mounted) Navigator.pop(context);
                         },
                       );
                     },

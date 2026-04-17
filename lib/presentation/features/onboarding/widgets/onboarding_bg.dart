@@ -19,14 +19,14 @@ class OnboardingBackground extends StatelessWidget {
           Align(
             alignment: Alignment.topRight,
             child: AppSvgImage(
-              Assets.onboardingTopIllustration,
+              Assets.onboarding.topIllustration.path,
               width: 1.sw,
             ),
           ),
           Align(
             alignment: Alignment.bottomLeft,
             child: AppSvgImage(
-              Assets.onboardingBottomIllustration,
+              Assets.onboarding.bottomIllustration.path,
               height: .3.sh,
             ),
           ),

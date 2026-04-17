@@ -8,7 +8,7 @@ extension FailuresMapper on Failure {
   String get message {
     loggerNoStack.i(this);
     return switch (this) {
-      // auth
+      // svg
       TokenExpired() => t.errors.failures.token.expired,
       NoPreviousAuth() => t.errors.failures.token.noPreviousAuth,
       // emailVerificationFailed: (_) => t.errors.authFailures.emailVerificationFailed,

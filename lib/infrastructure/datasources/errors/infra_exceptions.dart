@@ -28,13 +28,11 @@ class InfraExceptions with _$InfraExceptions {
     logger.e('[InfraExceptions] [FAILURE] $error');
     if (error is UnexpectedValueError) {
       return Failure.unableToProcess(
-        error.valueFailure.failedValue?.toString() ??
-            t.errors.failures.somethingWentWrong,
+        error.valueFailure.failedValue?.toString() ?? t.errors.failures.somethingWentWrong,
       );
     } else if (error is PlatformException) {
       return _getPlatformException(error);
     }
-
     // websocket_channel
     else if (error is Exception) {
       // Dio
@@ -65,7 +63,7 @@ class InfraExceptions with _$InfraExceptions {
     late Failure failure;
     switch (error.code) {
       // case "sign_in_failed":
-      //   failure = Failure.authFailure(AuthFailure.somethingWentWrong(message: t.errors.failures.auth.googleSignIn));
+      //   failure = Failure.authFailure(AuthFailure.somethingWentWrong(message: t.errors.failures.svg.googleSignIn));
       //   break;
       default:
         failure = Failure.unexpectedError(

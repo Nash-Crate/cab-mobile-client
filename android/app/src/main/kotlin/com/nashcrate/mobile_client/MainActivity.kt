@@ -1,4 +1,4 @@
-package com.mauricab.mobile_client
+package com.nashcrate.mobile_client
 
 import io.flutter.embedding.android.FlutterActivity
 

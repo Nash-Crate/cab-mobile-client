@@ -62,7 +62,7 @@ class RideDriverContact extends StatelessWidget {
                     ),
                     padding: EdgeInsets.zero,
                   ),
-                  child: AppSvgImage(Assets.commonCallIcon, width: 50.w, height: 50.w),
+                  child: AppSvgImage(Assets.common.callIcon.path, width: 50.w, height: 50.w),
                 ),
                 WSB(40.w),
                 ElevatedButton(
@@ -74,7 +74,7 @@ class RideDriverContact extends StatelessWidget {
                     ),
                     padding: EdgeInsets.zero,
                   ),
-                  child: AppSvgImage(Assets.commonMessageIcon, width: 50.w, height: 50.w),
+                  child: AppSvgImage(Assets.common.messageIcon.path, width: 50.w, height: 50.w),
                 ),
               ],
             ),

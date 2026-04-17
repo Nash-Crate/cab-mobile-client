@@ -40,9 +40,9 @@ class DropOffFab extends StatelessWidget {
                           Icons.chevron_left,
                           color: Color.fromRGBO(139, 139, 139, 1),
                         ),
-                        const CircleAvatar(
-                          backgroundColor: Color.fromRGBO(255, 241, 200, 1),
-                          child: AppSvgImage(Assets.homePickupInvertedSmall),
+                        CircleAvatar(
+                          backgroundColor: const Color.fromRGBO(255, 241, 200, 1),
+                          child: AppSvgImage(Assets.home.pickupInvertedSmall.path),
                         ),
                         // WSB(20.w),
                         Expanded(

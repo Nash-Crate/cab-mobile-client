@@ -24,7 +24,7 @@ class TripCompleted extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   HSB(50.h),
-                  AppSvgImage(Assets.rideMapArrived, width: .3.sw),
+                  AppSvgImage(Assets.ride.mapArrived.path, width: .3.sw),
                   HSB(100.h),
                   SizedBox(
                     width: 0.6.sw,

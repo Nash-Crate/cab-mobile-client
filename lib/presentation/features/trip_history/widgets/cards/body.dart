@@ -77,14 +77,14 @@ class TripHistoryCardBody extends StatelessWidget {
           Positioned(
             top: 0,
             left: 0,
-            child: AppSvgImage(Assets.tripHistoryPickUp, width: 72.w, height: 72.h),
+            child: AppSvgImage(Assets.tripHistory.pickUp.path, width: 72.w, height: 72.h),
           ),
           Positioned(
             bottom: 0,
             left: 0,
             child: SizedBox(
               width: 72.w,
-              child: AppSvgImage(Assets.tripHistoryDropOff, width: 54.w, height: 77.h),
+              child: AppSvgImage(Assets.tripHistory.dropOff.path, width: 54.w, height: 77.h),
             ),
           ),
         ],

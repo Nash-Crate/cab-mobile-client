@@ -16,9 +16,9 @@ class AboutUsHeader extends StatelessWidget {
         bottom: Radius.circular(80.r),
       ),
       child: Container(
-        decoration: const BoxDecoration(
+        decoration: BoxDecoration(
           image: DecorationImage(
-            image: AssetImage(Assets.aboutUsHeaderBg),
+            image: AssetImage(Assets.aboutUs.headerBg.path),
             fit: BoxFit.fitWidth,
             opacity: .8,
           ),

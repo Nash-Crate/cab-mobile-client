@@ -58,9 +58,9 @@ class HomeFloatingActions extends StatelessWidget {
             AnimatedCrossFade(
               duration: crossFadeDuration * .5,
               firstChild: DropOffFab(
-                onOpenRide: () {
+                onOpenRide: () async {
                   context.read<RideCubit>().startOpenRide();
-                  startTheRide(context);
+                  await startTheRide(context);
                 },
               ),
               secondChild: const CurrentPositionFab(),
@@ -76,17 +76,17 @@ class HomeFloatingActions extends StatelessWidget {
                 duration: crossFadeDuration,
                 firstChild: HomeExtendedFab(
                   fillColor: context.colorScheme.secondary,
-                  iconPath: Assets.homePickupInverted,
+                  iconPath: Assets.home.pickupInverted.path,
                   label: t.home.actions.begin,
                   onPressed: context.read<RideCubit>().setPickupLocation,
                 ),
                 secondChild: HomeExtendedFab(
                   fillColor: context.colorScheme.primary,
-                  iconPath: Assets.homeDropOffInverted,
+                  iconPath: Assets.home.dropOffInverted.path,
                   label: t.home.actions.setDropOff,
-                  onPressed: () {
-                    context.read<RideCubit>().setDropOffLocation();
-                    startTheRide(context);
+                  onPressed: () async {
+                    await context.read<RideCubit>().setDropOffLocation();
+                    if (context.mounted) await startTheRide(context);
                   },
                 ),
                 crossFadeState: state.startLocation != null

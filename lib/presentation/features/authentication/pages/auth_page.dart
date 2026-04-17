@@ -12,7 +12,7 @@ class AuthPage extends StatefulWidget {
   const AuthPage({super.key});
 
   /// router path
-  static const String path = '/auth';
+  static const String path = '/svg';
 
   @override
   State<AuthPage> createState() => _AuthPageState();

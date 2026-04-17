@@ -58,7 +58,7 @@ class _SplashLogoState extends State<SplashLogo> with TickerProviderStateMixin {
           child: SizedBox(
             width: 0.8.sw,
             height: 0.8.sw,
-            child: const AppImage(Assets.imageLogo),
+            child: AppImage(Assets.logo.logo.path),
           ),
         ),
       ),

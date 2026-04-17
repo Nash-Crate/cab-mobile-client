@@ -39,7 +39,7 @@ class HomeMapView extends StatelessWidget {
                       child: Stack(
                         children: [
                           SizedBox(width: 141.w, height: 195.h),
-                          AppSvgImage(Assets.homePickup, width: 141.w, height: 195.h),
+                          AppSvgImage(Assets.home.pickup.path, width: 141.w, height: 195.h),
                         ],
                       ),
                     ),
@@ -55,7 +55,7 @@ class HomeMapView extends StatelessWidget {
                       child: Stack(
                         children: [
                           SizedBox(width: 141.w, height: 195.h),
-                          AppSvgImage(Assets.homeDropOff, width: 141.w, height: 195.h),
+                          AppSvgImage(Assets.home.dropOff.path, width: 141.w, height: 195.h),
                         ],
                       ),
                     ),

@@ -1,3 +1,5 @@
+import 'dart:async';
+
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:injectable/injectable.dart';
@@ -7,13 +9,16 @@ import 'package:mobile_client/presentation/extensions/extensions.dart';
 import 'package:mobile_library/mobile_library.dart';
 
 part 'i18n_cubit.freezed.dart';
+
 part 'i18n_state.dart';
 
 /// Internationalization state
 @singleton
 class I18nCubit extends Cubit<I18nState> {
   /// constructor
-  I18nCubit(this._getCachedLanguageCode, this._cacheLanguageCode) : super(I18nState.initial());
+  I18nCubit(this._getCachedLanguageCode, this._cacheLanguageCode) : super(I18nState.initial()) {
+    unawaited(init());
+  }
 
   final GetCachedLanguageCode _getCachedLanguageCode;
   final CacheLanguageCode _cacheLanguageCode;

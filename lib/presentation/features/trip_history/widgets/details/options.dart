@@ -59,7 +59,7 @@ class TripDetailsOptions extends StatelessWidget {
                         Expanded(
                           child: SizedBox(
                             height: 120.h,
-                            child: const AppImage(Assets.tripStandardClassCarCropped),
+                            child: AppImage(Assets.home.trip.standardClassCarCropped.path),
                           ),
                         ),
                       ],
@@ -89,7 +89,10 @@ class TripDetailsOptions extends StatelessWidget {
                           child: SizedBox(
                             width: 158.w,
                             height: 179.h,
-                            child: const AppImage(Assets.tripPayMethodCash, fit: BoxFit.contain),
+                            child: AppImage(
+                              Assets.home.trip.payMethodCash.path,
+                              fit: BoxFit.contain,
+                            ),
                           ),
                         ),
                         Align(

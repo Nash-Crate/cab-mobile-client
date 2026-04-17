@@ -1,3 +1,5 @@
+import 'dart:async';
+
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:injectable/injectable.dart';
@@ -6,14 +8,16 @@ import 'package:mobile_client/presentation/extensions/extensions.dart';
 import 'package:mobile_library/mobile_library.dart';
 
 part 'trip_history_cubit.freezed.dart';
+
 part 'trip_history_state.dart';
 
 /// Trip history cubit
 @injectable
 class TripHistoryCubit extends Cubit<TripHistoryState> {
   /// Constructor
-  TripHistoryCubit(this._getTripHistoryItems)
-      : super(TripHistoryState.initial());
+  TripHistoryCubit(this._getTripHistoryItems) : super(TripHistoryState.initial()) {
+    unawaited(fetch());
+  }
 
   final GetTripHistoryItems _getTripHistoryItems;
 
@@ -52,8 +56,8 @@ class TripHistoryCubit extends Cubit<TripHistoryState> {
   }
 
   /// Set trip history sort by and fetch again
-  void setSortBy(TripHistorySortByEnum sortBy) {
+  Future<void> setSortBy(TripHistorySortByEnum sortBy) async {
     emit(state.copyWith(sortBy: sortBy));
-    fetch(reset: true);
+    await fetch(reset: true);
   }
 }

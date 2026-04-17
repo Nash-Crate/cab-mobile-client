@@ -22,7 +22,7 @@ class PickDropLocation extends StatelessWidget {
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              AppSvgImage(Assets.rideTripPickupLocation, width: 100.w, height: 100.h),
+              AppSvgImage(Assets.ride.tripPickupLocation.path, width: 100.w, height: 100.h),
               WSB(50.w),
               Expanded(
                 child: Column(
@@ -53,7 +53,7 @@ class PickDropLocation extends StatelessWidget {
               ),
               Padding(
                 padding: EdgeInsets.only(left: 50.w),
-                child: AppSvgImage(Assets.ridePencil, width: 100.w),
+                child: AppSvgImage(Assets.ride.pencil.path, width: 100.w),
               ),
             ],
           ),
@@ -61,7 +61,7 @@ class PickDropLocation extends StatelessWidget {
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              AppSvgImage(Assets.rideTripDropOffLocation, width: 100.w, height: 100.h),
+              AppSvgImage(Assets.ride.tripDropOffLocation.path, width: 100.w, height: 100.h),
               WSB(50.w),
               Expanded(
                 child: Column(
@@ -93,7 +93,7 @@ class PickDropLocation extends StatelessWidget {
               Padding(
                 padding: EdgeInsets.only(left: 50.w),
                 child: AppSvgImage(
-                  Assets.ridePencil,
+                  Assets.ride.pencil.path,
                   color: context.colorScheme.primary,
                   width: 100.w,
                 ),

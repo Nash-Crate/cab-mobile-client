@@ -54,7 +54,7 @@ class GenderField extends StatelessWidget {
                       : Colors.white,
                   onPressed: () => onChanged(GenderEnum.female),
                   icon: AppSvgImage(
-                    LibAssets.svgFemaleSign,
+                    LibAssets.svg.femaleSign.path,
                     height: 65.h,
                     package: 'mobile_library',
                   ),
@@ -83,7 +83,11 @@ class GenderField extends StatelessWidget {
                       ? context.theme.colorScheme.primary
                       : Colors.white,
                   onPressed: () => onChanged(GenderEnum.male),
-                  icon: AppSvgImage(LibAssets.svgMaleSign, height: 65.h, package: 'mobile_library'),
+                  icon: AppSvgImage(
+                    LibAssets.svg.maleSign.path,
+                    height: 65.h,
+                    package: 'mobile_library',
+                  ),
                   label: Text(
                     t.common.gender.value[GenderEnum.male.name] ?? GenderEnum.male.name,
                     style: GoogleFonts.poppins(

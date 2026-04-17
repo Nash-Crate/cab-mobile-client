@@ -4,11 +4,11 @@ import 'package:mobile_client/presentation/constants/constants.dart';
 import 'package:mobile_library/mobile_library.dart';
 
 /// Pick Up map marker
-Future<BitmapDescriptor> get pickUpMapMarker async {
+Future<BitmapDescriptor> get pickUpMapMarkerIcon async {
   return SizedBox(
     width: 141.w / 2.5,
     height: 195.h / 2.5,
-    child: const AppSvgImage(Assets.homeDroppedPickup),
+    child: AppSvgImage(Assets.home.droppedPickup.path),
   ).toBitmapDescriptor();
 }
 
@@ -17,7 +17,7 @@ Future<BitmapDescriptor> get dropOffMapMarker async {
   return SizedBox(
     width: 141.w / 2.5,
     height: 195.h / 2.5,
-    child: const AppSvgImage(Assets.homeDroppedDropOff),
+    child: AppSvgImage(Assets.home.droppedDropOff.path),
   ).toBitmapDescriptor();
 }
 
@@ -26,6 +26,6 @@ Future<BitmapDescriptor> get driverMapMarker async {
   return SizedBox(
     width: 141.w / 2.5,
     height: 195.h / 2.5,
-    child: const AppImage(Assets.rideDriver, fit: BoxFit.contain),
+    child: AppImage(Assets.ride.driver.path, fit: BoxFit.contain),
   ).toBitmapDescriptor();
 }

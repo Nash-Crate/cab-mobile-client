@@ -27,7 +27,7 @@ class HomeAppBar extends StatelessWidget implements PreferredSizeWidget {
         style: context.textTheme.titleLarge?.copyWith(color: Colors.black),
       ),
       leadingWidth: 100.w + 158.w,
-      leading: DrawerMenuButton(onPressed: onPressed, assetIcon: LibAssets.svgMenu),
+      leading: DrawerMenuButton(onPressed: onPressed, assetIcon: LibAssets.svg.menu.path),
       bottom: PreferredSize(
         preferredSize: const Size.fromHeight(kToolbarHeight),
         child: Container(

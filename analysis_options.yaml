@@ -14,7 +14,7 @@ analyzer:
     - "**/*.g.dart"
     - "**/*.freezed.dart"
     - "**/*.generated.dart"
-    #    - "**/*.config.dart"
+    #    - "**/*.configs.dart"
     # Build
     - 'build/**'
     # Assets

@@ -24,7 +24,7 @@ if (localPropsFile.exists()) {
 
 val googleMapsApiKey: String? by lazy {
     localProps.getProperty("googleMapsApiKey")
-        ?: System.getenv("GOOGLE_MAPS_API_KEY_ENVIRONMENT_VARIABLE")
+        ?: System.getenv("GOOGLE_MAPS_API_KEY_ENVIRONMENT_VARIABLE_ANDROID")
 }
 val flutterNdkVersion: String by lazy {
     localProps.getProperty("ndkVersion")
@@ -33,8 +33,7 @@ val flutterNdkVersion: String by lazy {
 
 
 android {
-    namespace = "com.mauricab.mobile_client"
-    compileSdk = flutter.compileSdkVersion
+    namespace = "com.nashcrate.mobile_client"
     ndkVersion = flutterNdkVersion
 
     compileOptions {
@@ -47,11 +46,12 @@ android {
     }
 
     defaultConfig {
-        applicationId = "com.mauricab.mobile_client"
+        applicationId = "com.nashcrate.mobile_client"
         // You can update the following values to match your application needs.
         // For more information, see: https://flutter.dev/to/review-gradle-config.
         minSdk = flutter.minSdkVersion
         targetSdk = flutter.targetSdkVersion
+        compileSdk = flutter.compileSdkVersion
         versionCode = flutter.versionCode
         versionName = flutter.versionName
         manifestPlaceholders["google_maps_api_key"] = googleMapsApiKey ?: ""
@@ -82,12 +82,12 @@ android {
 
                 // Development
                 else -> {
-                    keyAlias = keystoreProperties["keyAlias"] as String
-                    keyPassword = keystoreProperties["keyPassword"] as String
+                    keyAlias = keystoreProperties["keyAlias"] as String?
+                    keyPassword = keystoreProperties["keyPassword"] as String?
                     storeFile =
                         keystoreProperties["storeFile"]?.let { file(it) }
                     storePassword =
-                        keystoreProperties["storePassword"] as String
+                        keystoreProperties["storePassword"] as String?
                 }
             }
         }
@@ -110,10 +110,11 @@ android {
         getByName("debug") {
             signingConfig = signingConfigs.getByName("debug")
         }
+
         getByName("release") {
             signingConfig = signingConfigs.getByName("release")
             isMinifyEnabled = true
-            proguardFiles += getDefaultProguardFile("proguard-android.txt")
+            proguardFiles += getDefaultProguardFile("proguard-android-optimize.txt")
         }
     }
 

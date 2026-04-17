@@ -29,7 +29,7 @@ platform :android do
 
 #     test_only
 
-    sh("flutter build appbundle -t lib/main_stg.dart --flavor staging --obfuscate --split-debug-info=build/app/outputs/apk/release/obfuscate-files --dart-define HTTP_BASE_URL=#{ENV["HTTP_BASE_URL"]} --dart-define GOOGLE_MAPS_API_KEY_ENVIRONMENT_VARIABLE=#{ENV["GOOGLE_MAPS_API_KEY_ENVIRONMENT_VARIABLE"]}")
+    sh("flutter build appbundle -t lib/main_stg.dart --flavor staging --obfuscate --split-debug-info=build/app/outputs/apk/release/obfuscate-files --dart-define HTTP_BASE_URL=#{ENV["HTTP_BASE_URL"]} --dart-define GOOGLE_MAPS_API_KEY_ENVIRONMENT_VARIABLE_ANDROID=#{ENV["GOOGLE_MAPS_API_KEY_ENVIRONMENT_VARIABLE_ANDROID"]}")
 
     Dir.chdir("#{Dir.pwd}/android/fastlane/")
 
@@ -37,7 +37,7 @@ platform :android do
       # version_name: version_name + "+" + build_number, # 0.0.1+1
       release_status: "draft",
       track: "internal",
-      package_name: "com.mauricab.mobile_client.stg",
+      package_name: "com.nashcrate.mobile_client.stg",
       json_key: ENV["GCC_SERVICE_ACC"],
       skip_upload_apk: true,
       aab: "../build/app/outputs/bundle/stagingRelease/app-staging-release.aab",

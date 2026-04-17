@@ -29,8 +29,8 @@ class TripHistorySortBy extends StatelessWidget {
                 ),
               ),
             ),
-            onPressed: () {
-              showModalBottomSheet<void>(
+            onPressed: () async {
+              await showModalBottomSheet<void>(
                 context: context,
                 useRootNavigator: true,
                 useSafeArea: true,
@@ -48,7 +48,7 @@ class TripHistorySortBy extends StatelessWidget {
                 ),
                 WSB(40.w),
                 AppSvgImage(
-                  LibAssets.svgSort,
+                  LibAssets.svg.sort.path,
                   width: 43.w,
                   height: 36.h,
                   package: 'mobile_library',

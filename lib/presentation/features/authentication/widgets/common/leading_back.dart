@@ -17,7 +17,7 @@ class RegisterLeadingBack extends StatelessWidget {
           Padding(
             padding: EdgeInsets.symmetric(vertical: 50.h),
             child: AppSvgImage(
-              LibAssets.svgChevronLeft,
+              LibAssets.svg.chevronLeft.path,
               alignment: Alignment.centerLeft,
               height: 80.h,
               width: 180.w,

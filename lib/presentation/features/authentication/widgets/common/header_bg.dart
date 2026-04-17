@@ -10,9 +10,9 @@ class HeaderBg extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      decoration: const BoxDecoration(
+      decoration: BoxDecoration(
         image: DecorationImage(
-          image: AssetImage(Assets.authHeaderBg),
+          image: AssetImage(Assets.auth.headerBg.path),
           fit: BoxFit.fitHeight,
         ),
       ),

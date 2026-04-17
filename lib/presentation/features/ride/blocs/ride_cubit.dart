@@ -14,6 +14,7 @@ import 'package:mobile_client/presentation/theme/theme.dart';
 import 'package:mobile_library/mobile_library.dart';
 
 part 'ride_cubit.freezed.dart';
+
 part 'ride_state.dart';
 
 /// markers
@@ -48,12 +49,11 @@ class RideCubit extends Cubit<RideState> {
   void clearRide() => emit(RideState.initial());
 
   /// Init map controller
-  // ignore: use_setters_to_change_properties
   void initMapController(GoogleMapController controller) {
     _controller = controller;
 
     emit(state.copyWith(positionProcessing: true));
-    toCurrentLocation();
+    unawaited(toCurrentLocation());
   }
 
   /// Called when vehicle class is changed
@@ -66,7 +66,7 @@ class RideCubit extends Cubit<RideState> {
   /// set pickup location
   Future<void> setPickupLocation() async {
     final location = await getCenter();
-    final icon = await pickUpMapMarker;
+    final icon = await pickUpMapMarkerIcon;
     final marker = Marker(
       markerId: const MarkerId(pickUpMarkerKey),
       position: LatLng(location.latitude, location.longitude),
@@ -115,12 +115,13 @@ class RideCubit extends Cubit<RideState> {
     );
 
     if (state.startLocation != null && state.endLocation != null) {
-      await getPolylineCoordinates(
+      final pc = await getPolylineCoordinates(
         state.startLocation!.latLong,
         state.endLocation!.latLong,
-      ).then(
-        (pc) => displayPolylinesFromPoints(pc, polylineId: ridePolylineKey),
       );
+
+      displayPolylinesFromPoints(pc, polylineId: ridePolylineKey);
+
       // move camera to center of the route
       await setCameraPosition(
         LatLong(
@@ -295,7 +296,8 @@ class RideCubit extends Cubit<RideState> {
 
     final polylineCoordinates = <LatLng>[];
     final polylinePoints = PolylinePoints(
-      apiKey: const String.fromEnvironment('GOOGLE_MAPS_API_KEY_ENVIRONMENT_VARIABLE'),
+      // TODO(change): change to ios key when on ios
+      apiKey: const String.fromEnvironment('GOOGLE_MAPS_API_KEY_ENVIRONMENT_VARIABLE_ANDROID'),
     );
 
     // final result = await polylinePoints.getRouteBetweenCoordinates(
