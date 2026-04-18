@@ -33,7 +33,7 @@ val flutterNdkVersion: String by lazy {
 
 
 android {
-    namespace = "com.nashcrate.mobile_client"
+    namespace = "com.nashcrate.cab_passenger"
     ndkVersion = flutterNdkVersion
 
     compileOptions {
@@ -46,7 +46,7 @@ android {
     }
 
     defaultConfig {
-        applicationId = "com.nashcrate.mobile_client"
+        applicationId = "com.nashcrate.cab_passenger"
         // You can update the following values to match your application needs.
         // For more information, see: https://flutter.dev/to/review-gradle-config.
         minSdk = flutter.minSdkVersion
@@ -126,7 +126,7 @@ android {
             resValue(
                 type = "string",
                 name = "app_name",
-                value = "[DEV] MauriCab"
+                value = "[DEV] Nashcrate Cab"
             )
         }
         create("staging") {
@@ -135,7 +135,7 @@ android {
             resValue(
                 type = "string",
                 name = "app_name",
-                value = "[STG] MauriCab"
+                value = "[STG] Nashcrate Cab"
             )
         }
         create("production") {
@@ -144,7 +144,7 @@ android {
             resValue(
                 type = "string",
                 name = "app_name",
-                value = "MauriCab"
+                value = "Nashcrate Cab"
             )
         }
     }

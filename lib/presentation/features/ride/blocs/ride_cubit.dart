@@ -43,6 +43,10 @@ class RideCubit extends Cubit<RideState> {
   /// Constructor
   RideCubit() : super(RideState.initial());
 
+  // package name and sha1 for using Google Maps Routes API on Android
+  final _androidPackage = const String.fromEnvironment('ANDROID_PACKAGE');
+  final _androidCert = const String.fromEnvironment('ANDROID_CERT_SHA1');
+
   late final GoogleMapController _controller;
 
   /// Clear ride
@@ -314,6 +318,10 @@ class RideCubit extends Cubit<RideState> {
       destination: PointLatLng(end.latitude, end.longitude),
       // travelMode: TravelMode.driving,
       routingPreference: RoutingPreference.trafficAware,
+      headers: {
+        'X-Android-Package': _androidPackage,
+        'X-Android-Cert': _androidCert,
+      },
     );
 
     // Get route using Routes API

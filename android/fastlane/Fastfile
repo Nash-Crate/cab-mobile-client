@@ -37,7 +37,7 @@ platform :android do
       # version_name: version_name + "+" + build_number, # 0.0.1+1
       release_status: "draft",
       track: "internal",
-      package_name: "com.nashcrate.mobile_client.stg",
+      package_name: "com.nashcrate.cab_passenger.stg",
       json_key: ENV["GCC_SERVICE_ACC"],
       skip_upload_apk: true,
       aab: "../build/app/outputs/bundle/stagingRelease/app-staging-release.aab",
