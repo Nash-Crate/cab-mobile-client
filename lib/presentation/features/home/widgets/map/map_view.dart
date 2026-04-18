@@ -24,22 +24,39 @@ class HomeMapView extends StatelessWidget {
               zoomControlsEnabled: false,
               markers: state.markers,
               polylines: state.polylines.values.toSet(),
+              onCameraMove: (position) {
+                if (state.cameraZoom != position.zoom) {
+                  context.read<RideCubit>().setCameraZoom(position.zoom);
+                }
+              },
             ),
 
             // overlay pins
-            Column(
-              mainAxisAlignment: MainAxisAlignment.center,
+            Stack(
+              alignment: Alignment.center,
               children: [
                 // pickup icon
                 if (state.startLocation == null)
                   Center(
                     child: SizedBox(
-                      width: 141.w,
-                      height: 195.h * 2,
+                      width: 200.w,
+                      height: 260.h,
                       child: Stack(
                         children: [
-                          SizedBox(width: 141.w, height: 195.h),
-                          AppSvgImage(Assets.home.pickup.path, width: 141.w, height: 195.h),
+                          SizedBox(
+                            width: 200.w,
+                            height: 260.h,
+                            // DEBUG-ONLY child: ColoredBox(color: Colors.green.withValues(alpha: .3)),
+                          ),
+                          Align(
+                            alignment: Alignment.topCenter,
+                            child: AppSvgImage(
+                              Assets.home.pickup.path,
+                              // width: 100.w,
+                              height: 100.h,
+                              fit: BoxFit.fitHeight,
+                            ),
+                          ),
                         ],
                       ),
                     ),
@@ -50,12 +67,24 @@ class HomeMapView extends StatelessWidget {
                     state.startLocation != null)
                   Center(
                     child: SizedBox(
-                      width: 141.w,
-                      height: 195.h * 2,
+                      width: 200.w,
+                      height: 300.h,
                       child: Stack(
                         children: [
-                          SizedBox(width: 141.w, height: 195.h),
-                          AppSvgImage(Assets.home.dropOff.path, width: 141.w, height: 195.h),
+                          SizedBox(
+                            width: 200.w,
+                            height: 300.h,
+                            // DEBUG-ONLY child: ColoredBox(color: Colors.red.withValues(alpha: .3)),
+                          ),
+                          Align(
+                            alignment: Alignment.topCenter,
+                            child: AppSvgImage(
+                              Assets.home.dropOff.path,
+                              // width: 100.w,
+                              height: 100.h,
+                              fit: BoxFit.fitHeight,
+                            ),
+                          ),
                         ],
                       ),
                     ),

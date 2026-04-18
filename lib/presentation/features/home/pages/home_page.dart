@@ -21,7 +21,12 @@ class HomePage extends StatelessWidget {
     return MultiBlocProvider(
       providers: [
         // BlocProvider<HomeMapActionsCubit>(create: (context) => getIt<HomeMapActionsCubit>()),
-        BlocProvider<RideCubit>(create: (context) => getIt<RideCubit>()),
+        BlocProvider<RideCubit>(
+          create: (context) {
+            final currentLocation = context.read<AppConfigsCubit>().state.currentLocation;
+            return getIt<RideCubit>(param1: currentLocation);
+          },
+        ),
       ],
       child: Builder(
         builder: (context) {

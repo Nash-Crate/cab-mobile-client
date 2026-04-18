@@ -41,7 +41,9 @@ const travelledPolylineKey = 'travelled';
 @injectable
 class RideCubit extends Cubit<RideState> {
   /// Constructor
-  RideCubit() : super(RideState.initial());
+  RideCubit(@factoryParam LatLong? currentPosition) : super(RideState.initial(currentPosition)) {
+    if (currentPosition == null) unawaited(toCurrentLocation());
+  }
 
   // package name and sha1 for using Google Maps Routes API on Android
   final _androidPackage = const String.fromEnvironment('ANDROID_PACKAGE');
@@ -50,7 +52,10 @@ class RideCubit extends Cubit<RideState> {
   late final GoogleMapController _controller;
 
   /// Clear ride
-  void clearRide() => emit(RideState.initial());
+  void clearRide() {
+    final currentPosition = state.cameraPosition;
+    emit(RideState.initial(null).copyWith(cameraPosition: currentPosition));
+  }
 
   /// Init map controller
   void initMapController(GoogleMapController controller) {
@@ -127,12 +132,12 @@ class RideCubit extends Cubit<RideState> {
       displayPolylinesFromPoints(pc, polylineId: ridePolylineKey);
 
       // move camera to center of the route
-      await setCameraPosition(
-        LatLong(
-          latitude: location.latitude - 0.005,
-          longitude: location.longitude,
-        ),
-      );
+      // await setCameraPosition(
+      //   LatLong(
+      //     latitude: location.latitude - 0.005,
+      //     longitude: location.longitude,
+      //   ),
+      // );
     }
   }
 
@@ -384,12 +389,12 @@ class RideCubit extends Cubit<RideState> {
   }
 
   /// Move camera to a specific location
-  Future<void> setCameraPosition(LatLong location, {double zoom = 14}) async {
+  Future<void> setCameraPosition(LatLong location) async {
     emit(state.copyWith(positionProcessing: true));
 
     final position = CameraPosition(
       target: LatLng(location.latitude, location.longitude),
-      zoom: zoom,
+      zoom: state.cameraZoom,
     );
 
     emit(state.copyWith(cameraPosition: position, positionProcessing: false));
@@ -399,15 +404,18 @@ class RideCubit extends Cubit<RideState> {
   /// Move camera to current location
   Future<void> toCurrentLocation() async {
     try {
+      emit(state.copyWith(positionProcessing: true));
+
       final l = await getCurrentLocation;
-      await setCameraPosition(
-        LatLong(latitude: l.latitude, longitude: l.longitude),
-      );
+      await setCameraPosition(LatLong(latitude: l.latitude, longitude: l.longitude));
     } on Exception {
       emit(state.copyWith(positionProcessing: false));
       addError(t.errors.location.permissionsDenied);
     }
   }
+
+  /// set camera zoom
+  void setCameraZoom(double zoom) => emit(state.copyWith(cameraZoom: zoom));
 }
 
 /// Home map cubit extension

@@ -4,6 +4,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
 import 'package:mobile_client/i18n/translations.g.dart';
+import 'package:mobile_client/logger.dart';
+import 'package:mobile_client/presentation/common/common.dart';
 import 'package:mobile_client/presentation/constants/constants.dart';
 import 'package:mobile_client/presentation/features/authentication/authentication.dart';
 import 'package:mobile_client/presentation/features/home/home.dart';
@@ -31,6 +33,9 @@ class _SplashPageState extends State<SplashPage> {
   int _bgScale = 3;
   bool _contentVisible = false;
 
+  /// splash load till configs loaded
+  bool _configsLoaded = false;
+
   @override
   void initState() {
     super.initState();
@@ -44,12 +49,12 @@ class _SplashPageState extends State<SplashPage> {
     // });
   }
 
-  void _navigate() {
+  Future<void> _navigate() async {
     if (!_splashDone) return;
 
     // trigger navigate validation
-    _navigateValidation();
-    if (_nextRoutePath != null) context.go(_nextRoutePath!);
+    await _navigateValidation();
+    if (_nextRoutePath != null && mounted) context.go(_nextRoutePath!);
   }
 
   void _initialize() {
@@ -72,12 +77,23 @@ class _SplashPageState extends State<SplashPage> {
     });
   }
 
-  void _navigateValidation() {
+  Future<void> _navigateValidation() async {
     // check onboarding viewed status
     final authState = context.read<AuthActionsCubit>().state;
     // check previous authentication status
     if (authState is Authenticated) {
-      setState(() => _nextRoutePath = HomePage.path);
+      // if authenticated, wait till processing is done, then navigate to home
+      await Future.doWhile(
+        () async {
+          if (_configsLoaded) {
+            setState(() => _nextRoutePath = HomePage.path);
+            return false;
+          }
+
+          await Future<void>.delayed(const Duration(milliseconds: 300));
+          return true;
+        },
+      );
     }
     // if in processing, wait for processing to complete
     // BlocListener will re-trigger this once it's done
@@ -106,6 +122,13 @@ class _SplashPageState extends State<SplashPage> {
           listener: (context, state) {
             // any state other than processing will trigger navigation
             if (state is! AuthActionsProcessing) _navigate();
+          },
+        ),
+
+        BlocListener<AppConfigsCubit, AppConfigsState>(
+          listenWhen: (previous, current) => previous.isProcessing != current.isProcessing,
+          listener: (context, state) {
+            if (!state.isProcessing && !_configsLoaded) _configsLoaded = true;
           },
         ),
       ],

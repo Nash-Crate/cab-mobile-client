@@ -35,10 +35,8 @@ enum TripStateEnum {
 abstract class RideState with _$RideState {
   /// Factory constructor for RideState
   const factory RideState({
-    required Set<Marker> markers,
-    required Map<PolylineId, Polyline> polylines,
-    //
     required CameraPosition cameraPosition,
+    @Default(18.0) double cameraZoom,
     @Default(false) bool positionProcessing,
     @Default(null) TripLocation? startLocation,
     @Default(null) TripLocation? endLocation,
@@ -51,17 +49,15 @@ abstract class RideState with _$RideState {
     @Default(false) bool tripStarted,
     @Default(false) bool tripCompleted,
     @Default(false) bool tripConcluded,
+    @Default({}) Set<Marker> markers,
+    @Default({}) Map<PolylineId, Polyline> polylines,
   }) = _RideState;
 
   /// Initial state of the RideState
-  factory RideState.initial() {
-    return const RideState(
-      cameraPosition: CameraPosition(
-        target: LatLng(37.42796133580664, -122.085749655962),
-        zoom: 14.4746,
-      ),
-      markers: <Marker>{},
-      polylines: <PolylineId, Polyline>{},
-    );
-  }
+  factory RideState.initial(LatLong? currentPosition) => RideState(
+    cameraPosition: CameraPosition(
+      target: currentPosition?.toGMLatLng ?? const LatLng(37.42796133580664, -122.085749655962),
+      zoom: currentPosition != null ? 18 : 14,
+    ),
+  );
 }
